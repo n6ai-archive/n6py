@@ -1,4 +1,4 @@
-name: CI Test Publish
+name: CI Publish
 
 # Manual dispatch only,
 # that way we can control when and where to release a new version of a specific package.
