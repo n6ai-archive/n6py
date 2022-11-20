@@ -9,20 +9,20 @@ def removed(
 
     Parameters
     ----------
-    new: int, float, str, list or tuple
-        Number of new values or new values
-    old: int, float, str, list or tuple
-        Number of new values or new values
+    new : int, float, str, list or tuple
+        Number of new values or new values.
+    old : int, float, str, list or tuple
+        Number of new values or new values.
 
     Examples
     --------
     >>> rm_stat = removed(50, 100)
     >>> print(rm_stat)
-    'Remaining: 50/100 | Removed: 50 - 50.00%'
+    Remaining: 50/100 | Removed: 50 - 50.00%
 
     >>> rm_stat = removed([1, 2], [1, 2, 3, 4])
     >>> print(rm_stat)
-    'Remaining: 2/4 | Removed: 2 - 50.00%'
+    Remaining: 2/4 | Removed: 2 - 50.00%
     """
     is_type_numeric = type(new) in [int, float] and type(old) in [int, float]
 
