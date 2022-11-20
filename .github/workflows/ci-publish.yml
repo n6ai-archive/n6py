@@ -16,13 +16,13 @@ on:
 env:
   PYPI_TOKEN: ${{ (
     contains(github.event.inputs.repository, 'test.pypi') && secrets.TEST_PYPI_API_TOKEN || secrets.PYPI_API_TOKEN
-  ) }}
+    ) }}
   REPOSITORY_NAME: ${{ (
     contains(github.event.inputs.repository, 'test.pypi') && 'testpypi' || 'pypi'
-  ) }}
+    ) }}
   REPOSITORY_URL: ${{ (
     contains(github.event.inputs.repository, 'test.pypi') && 'https://test.pypi.org/legacy/' || null
-  ) }}
+    ) }}
 
 jobs:
   build-and-publish:
