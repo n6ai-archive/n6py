@@ -1,0 +1,20 @@
+name: CI Test Publish
+
+# Manual dispatch only,
+# that way we can control when to release a new version of a specific package.
+on:
+  workflow_dispatch:
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build and publish to test.pypi
+        uses: JRubics/poetry-publish@v1.15
+        with:
+          pypi_token: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          repository_name: 'testpypi'
+          repository_url: 'https://test.pypi.org/legacy/'
