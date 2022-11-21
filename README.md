@@ -17,3 +17,11 @@ pip install n6py
 ```sh
 poerty add n6py
 ```
+
+## Using
+
+To use the `n6py` package import it into your project.
+
+```py
+import n6py as n6
+```
