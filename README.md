@@ -1,7 +1,8 @@
 # N6 Py
 
-[![Black](https://img.shields.io/pypi/v/n6py?color=%23141414&style=for-the-badge)](https://pypi.org/project/n6py)
-[![Black](https://img.shields.io/badge/code%20style-black-141414.svg?style=for-the-badge)](https://github.com/psf/black)
+[![PyPI Latest Release](https://img.shields.io/pypi/v/n6py?color=%23141414&style=for-the-badge)](https://pypi.org/project/n6py)
+[![Package Status](https://img.shields.io/pypi/status/n6py?color=%23141414&style=for-the-badge)](https://pypi.org/project/n6py)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-141414.svg?style=for-the-badge)](https://github.com/psf/black)
 
 ## About
 
@@ -12,11 +13,13 @@ Tooling for common problems in Scientific Computing, Machine Learning and Deep L
 ## Installing
 
 **pip**
+
 ```sh
 pip install n6py
 ```
 
 **Poetry**
+
 ```sh
 poerty add n6py
 ```
