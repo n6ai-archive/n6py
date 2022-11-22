@@ -5,7 +5,7 @@
 
 ## About
 
-N6 AI Python Tools (WIP).
+N6 AI Python Tools.
 
 Tooling for common problems in Scientific Computing, Machine Learning and Deep Learning.
 
