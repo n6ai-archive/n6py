@@ -8,7 +8,7 @@ readme = "README.md"
 homepage = "https://github.com/n6ai/n6py"
 repository = "https://github.com/n6ai/n6py"
 documentation = "https://github.com/n6ai/n6py"
-keywords = ["n6py", "ai", "dl", "ml", "jupyter", "notebook"]
+keywords = ["n6py", "ai", "artificial intelligence", "dl", "deep learning", "ml", "machine learning", "jupyter", "notebook"]
 classifiers = [
     "Development Status :: 1 - Planning",
     "Framework :: Jupyter",
