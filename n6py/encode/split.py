@@ -1,9 +1,10 @@
 from typing import Union
 
+
 def split(
-  values: Union[list, tuple],
-  values_to_keep: Union[list, tuple],
-  remainder: Union[str, int, float, None] = 'other'
+    values: Union[list, tuple],
+    values_to_keep: Union[list, tuple],
+    remainder: Union[str, int, float, None] = "other",
 ) -> list:
     """
     Keep the provided values and encode everything else as the provided remainder.

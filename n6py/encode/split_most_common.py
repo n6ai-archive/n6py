@@ -1,10 +1,11 @@
 from typing import Union
 from collections import Counter
 
+
 def split_most_common(
     values: Union[list, tuple],
     num_to_keep: int = 10,
-    remainder: Union[str, int, float, None] = 'other'
+    remainder: Union[str, int, float, None] = "other",
 ) -> list:
     """
     Keep the x most common values and encode everything else as the provided remainder.
