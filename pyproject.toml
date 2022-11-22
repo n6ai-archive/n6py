@@ -5,6 +5,26 @@ description = "N6 AI Python Tools"
 authors = ["Sergej Samsonenko <contact@sergej.codes>"]
 license = "MIT"
 readme = "README.md"
+homepage = "https://github.com/n6ai/n6py"
+repository = "https://github.com/n6ai/n6py"
+documentation = "https://github.com/n6ai/n6py"
+keywords = ["n6py", "ai", "dl", "ml", "jupyter", "notebook"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Environment :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development",
+    "Framework :: Jupyter"
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/n6ai/n6py/issues"
 
 [tool.poetry.dependencies]
 python = "^3.9"
