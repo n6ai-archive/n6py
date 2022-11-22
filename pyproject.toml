@@ -20,7 +20,10 @@ classifiers = [
     "Operating System :: Unix",
     "Programming Language :: Python",
     "Topic :: Scientific/Engineering",
-    "Topic :: Software Development"
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
 [tool.poetry.urls]
