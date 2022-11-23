@@ -1,36 +1,48 @@
-from typing import Union
+"""
+Removed module
+"""
+from typing import Collection, Sequence, Union
 
 
 def removed(
-    new: Union[int, float, str, list, tuple], old: Union[int, float, str, list, tuple]
+    new: Union[Union[int, float], Sequence, Collection],
+    old: Union[Union[int, float], Sequence, Collection],
 ):
     """
-    Returns a stats string about the difference between the old value and the new one.
+    Return a stats string about the difference between the old value and the new one.
 
     Parameters
     ----------
-    new : int, float, str, list or tuple
+    new : int, float, Sequence or Collection
         Number of new values or new values.
-    old : int, float, str, list or tuple
+    old : int, float, Sequence or Collection
         Number of new values or new values.
+
+    Returns
+    -------
+    str :
+        A string of calculated stats.
 
     Examples
     --------
     >>> rm_stat = removed(50, 100)
     >>> print(rm_stat)
     Remaining: 50/100 | Removed: 50 - 50.00%
-
+    \u200B
     >>> rm_stat = removed([1, 2], [1, 2, 3, 4])
     >>> print(rm_stat)
     Remaining: 2/4 | Removed: 2 - 50.00%
     """
-    is_type_numeric = type(new) in [int, float] and type(old) in [int, float]
+    rm_num: Union[int, float] = 0
+    rm_percentage: Union[int, float] = 0
 
-    if not is_type_numeric:
-        new = len(new)
-        old = len(old)
+    if isinstance(new, (int, float)) and isinstance(old, (int, float)):
+        rm_num = old - new
+        rm_percentage = 100 / old * rm_num
+    elif isinstance(new, (Sequence, Collection)) and isinstance(
+        old, (Sequence, Collection)
+    ):
+        rm_num = len(old) - len(new)
+        rm_percentage = 100 / len(old) * rm_num
 
-    removed = old - new
-    removed_percentage = 100 / old * removed
-
-    return f"Remaining: {new}/{old} | Removed: {removed} - {removed_percentage:.2f}%"
+    return f"Remaining: {new}/{old} | Removed: {rm_num} - {rm_percentage:.2f}%"
