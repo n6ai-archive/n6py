@@ -1,0 +1,57 @@
+name: CI Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allows to run this workflow manually from the Actions tab on GitHub.
+    inputs:
+      version:
+        description: Manual version release e.g. 1.4.9
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+          release-type: python
+          release-as: ${{ github.event.inputs.version }}
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+
+  build-and-publish-test.pypi:
+    needs:
+      - release-please
+    runs-on: ubuntu-latest
+    if: ${{ needs.release-please.outputs.release_created }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: main # needs to be explicitly set to pull the latest changes
+
+      - name: Build and publish to test.pypi
+        uses: JRubics/poetry-publish@v1.15
+        with:
+          pypi_token: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          repository_name: testpypi
+          repository_url: https://test.pypi.org/legacy/
+
+  build-and-publish-pypi:
+    needs:
+      - release-please
+    runs-on: ubuntu-latest
+    if: ${{ needs.release-please.outputs.release_created }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: main # needs to be explicitly set to pull the latest changes
+
+      - name: Build and publish to test.pypi
+        uses: JRubics/poetry-publish@v1.15
+        with:
+          pypi_token: ${{ secrets.PYPI_API_TOKEN }}
