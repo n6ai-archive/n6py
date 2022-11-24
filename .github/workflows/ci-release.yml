@@ -22,7 +22,7 @@ jobs:
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
 
-  build-and-publish-test.pypi:
+  build-and-publish-test-pypi:
     needs:
       - release-please
     runs-on: ubuntu-latest
