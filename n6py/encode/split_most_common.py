@@ -30,8 +30,8 @@ def split_most_common(
     Examples
     --------
     >>> x = [1, 1, 1, 2, 2, 3, 4]
-    >>> split(x, 2)
-    [1, 1, 1, 2, 2, "other", "other"]
+    >>> split_most_common(x, 2)
+    [1, 1, 1, 2, 2, 'other', 'other']
     """
     counter = Counter(values).most_common(num_to_keep)
     most_common = [x[0] for x in counter]

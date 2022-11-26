@@ -30,7 +30,7 @@ def split(
     --------
     >>> x = [1, 2, 3, 4]
     >>> split(x, [1, 2])
-    [1, 2, "other", "other"]
+    [1, 2, 'other', 'other']
     """
     splitted_values: Union[list, tuple] = [
         x if x in values_to_keep else remainder for x in values
