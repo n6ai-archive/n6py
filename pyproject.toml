@@ -38,6 +38,7 @@ doctest = "pytest --doctest-modules"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+numpy = "^1.23.5"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.10.0"

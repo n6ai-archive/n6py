@@ -3,10 +3,13 @@ Removed module
 """
 from typing import Collection, Sequence, Union
 
+import numpy as np
+from numpy.typing import NDArray
+
 
 def removed(
-    new: Union[int, Sequence, Collection],
-    old: Union[int, Sequence, Collection],
+    new: Union[int, Sequence, Collection, NDArray],
+    old: Union[int, Sequence, Collection, NDArray],
 ):
     """
     Return a stats string about the difference between the old value and the new one.
@@ -43,7 +46,7 @@ def removed(
         rm_new = new
         rm_num = rm_old - rm_new
         rm_percentage = 100 / old * rm_num
-    elif isinstance(new, (Sequence, Collection)) and isinstance(
+    elif isinstance(new, (Sequence, Collection, np.ndarray)) and isinstance(
         old, (Sequence, Collection)
     ):
         rm_old = len(old)

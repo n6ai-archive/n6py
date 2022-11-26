@@ -2,9 +2,11 @@
 
 from collections import Counter
 
+import numpy as np
+
 from n6py.encode import split_most_common
 
-data = [[1, 1, 1, 2, 2, 3], (1, 1, 1, 2, 2, 3)]
+data = [[1, 1, 1, 2, 2, 3], (1, 1, 1, 2, 2, 3), np.array([1, 1, 1, 2, 2, 3])]
 
 
 def test_split_most_common():

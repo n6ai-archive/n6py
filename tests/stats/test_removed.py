@@ -1,5 +1,7 @@
 """removed unit test"""
 
+import numpy as np
+
 from n6py.stats import removed
 
 data = [
@@ -8,6 +10,7 @@ data = [
     {"old": (1, 2, 3), "new": (1, 2)},
     {"old": {1, 2, 3}, "new": {1, 2}},
     {"old": {"1": 1, "2": 2, "3": 3}, "new": {"1": 1, "2": 2}},
+    {"old": np.array([1, 2, 3]), "new": np.array([1, 2])},
 ]
 
 

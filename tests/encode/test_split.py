@@ -1,10 +1,13 @@
 """split unit test"""
 
+import numpy as np
+
 from n6py.encode import split
 
 data = [
     {"old": [1, 2, 3], "keep": [1, 2]},
     {"old": (1, 2, 3), "keep": (1, 2)},
+    {"old": np.array([1, 2, 3]), "keep": np.array([1, 2])},
 ]
 
 
