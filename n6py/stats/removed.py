@@ -47,7 +47,7 @@ def removed(
         rm_num = rm_old - rm_new
         rm_percentage = 100 / old * rm_num
     elif isinstance(new, (Sequence, Collection, np.ndarray)) and isinstance(
-        old, (Sequence, Collection)
+        old, (Sequence, Collection, np.ndarray)
     ):
         rm_old = len(old)
         rm_new = len(new)
