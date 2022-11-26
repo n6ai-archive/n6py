@@ -29,6 +29,10 @@ classifiers = [
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/n6ai/n6py/issues"
 
+[tool.poe.tasks]
+format = "black n6py"
+lint = "pylint n6py"
+
 [tool.poetry.dependencies]
 python = "^3.9"
 
@@ -37,10 +41,6 @@ poethepoet = "^0.16.4"
 pre-commit = "^2.20.0"
 black = "^22.10.0"
 pylint = "^2.15.6"
-
-[tool.poe.tasks]
-format = "black n6py"
-lint = "pylint n6py"
 
 [build-system]
 requires = ["poetry-core"]
