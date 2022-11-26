@@ -24,6 +24,7 @@ jobs:
           token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
           release-type: python
           release-as: ${{ github.event.inputs.version }}
+          bump-patch-for-minor-pre-major: true
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
 
