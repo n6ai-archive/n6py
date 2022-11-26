@@ -11,21 +11,7 @@ on:
 
 jobs:
   run-tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-
-      - name: Install Dependencies
-        run: poetry install
-
-      - name: Run Tests
-        run: poetry test
+    uses: ./.github/workflows/ci-test.yml
 
   release-please:
     runs-on: ubuntu-latest
