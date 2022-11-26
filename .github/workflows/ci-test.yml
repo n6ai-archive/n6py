@@ -41,11 +41,12 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: poetry install --no-interaction
 
-      - name: Activate environment
-        run: source .venv/bin/activate
-
       - name: Run Tests
-        run: poe test
+        run: |
+          source .venv/bin/activate
+          poe test
 
       - name: Run Doctests
-        run: poe doctest
+        run: |
+          source .venv/bin/activate
+          poe doctest
