@@ -4,12 +4,13 @@ Removed module
 from typing import Collection, Sequence, Union
 
 import numpy as np
+import pandas as pd
 from numpy.typing import NDArray
 
 
 def removed(
-    new: Union[int, Sequence, Collection, NDArray],
-    old: Union[int, Sequence, Collection, NDArray],
+    new: Union[int, Sequence, Collection, NDArray, pd.Series, pd.DataFrame],
+    old: Union[int, Sequence, Collection, NDArray, pd.Series, pd.DataFrame],
 ):
     """
     Return a stats string about the difference between the old value and the new one.
@@ -46,9 +47,9 @@ def removed(
         rm_new = new
         rm_num = rm_old - rm_new
         rm_percentage = 100 / old * rm_num
-    elif isinstance(new, (Sequence, Collection, np.ndarray)) and isinstance(
-        old, (Sequence, Collection, np.ndarray)
-    ):
+    elif isinstance(
+        new, (Sequence, Collection, np.ndarray, pd.Series, pd.DataFrame)
+    ) and isinstance(old, (Sequence, Collection, np.ndarray, pd.Series, pd.DataFrame)):
         rm_old = len(old)
         rm_new = len(new)
         rm_num = rm_old - rm_new

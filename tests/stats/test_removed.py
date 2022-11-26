@@ -1,6 +1,7 @@
 """removed unit test"""
 
 import numpy as np
+import pandas as pd
 
 from n6py.stats import removed
 
@@ -11,6 +12,8 @@ data = [
     {"old": {1, 2, 3}, "new": {1, 2}},
     {"old": {"1": 1, "2": 2, "3": 3}, "new": {"1": 1, "2": 2}},
     {"old": np.array([1, 2, 3]), "new": np.array([1, 2])},
+    {"old": pd.Series([1, 2, 3]), "new": pd.Series([1, 2])},
+    {"old": pd.DataFrame([1, 2, 3]), "new": pd.DataFrame([1, 2])},
 ]
 
 

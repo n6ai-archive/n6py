@@ -5,21 +5,22 @@ from collections import Counter
 from typing import Union
 
 import numpy as np
+import pandas as pd
 from numpy.typing import NDArray
 
 
 def split_most_common(
-    values: Union[list, tuple, NDArray],
+    values: Union[list, tuple, NDArray, pd.Series],
     num_to_keep: int = 10,
     remainder: Union[str, int, float, None] = "other",
-) -> Union[list, tuple, NDArray]:
+) -> Union[list, tuple, NDArray, pd.Series]:
     """
     Keep the x most common values and encode everything else as the provided remainder.
 
     Parameters
     ----------
-    values : list, tuple or numpy array
-        A list, tuple or numpy array of values.
+    values : list, tuple, NDArray or pd.Series
+        A list, tuple, NDArray or pd.Series of values.
     num_to_keep : int, default 10
         How many of the most frequent values to keep.
     remainder : str, int, float or None, default 'other'
@@ -27,8 +28,8 @@ def split_most_common(
 
     Returns
     -------
-    list, tuple, NDArray :
-        A processed list, tuple or numpy array.
+    list, tuple, NDArray, pd.Series :
+        A processed list, tuple, NDArray or pd.Series.
 
     Examples
     --------
@@ -39,8 +40,8 @@ def split_most_common(
     counter = Counter(values).most_common(num_to_keep)
     most_common = [x[0] for x in counter]
 
-    splitted_values: Union[list, tuple, NDArray] = [
-        x if x in most_common else remainder for x in values
+    splitted_values: Union[list, tuple, NDArray, pd.Series] = [
+        x if x in most_common else remainder for x in list(values)
     ]
 
     if isinstance(values, tuple):
@@ -48,5 +49,8 @@ def split_most_common(
 
     elif isinstance(values, np.ndarray):
         splitted_values = np.array(splitted_values)
+
+    elif isinstance(values, pd.Series):
+        splitted_values = pd.Series(splitted_values)
 
     return splitted_values
