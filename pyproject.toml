@@ -30,8 +30,11 @@ classifiers = [
 "Bug Tracker" = "https://github.com/n6ai/n6py/issues"
 
 [tool.poe.tasks]
-format = "black n6py"
-lint = "pylint n6py"
+format = "black ."
+lint = "pylint n6py tests"
+test = "pytest tests"
+test-debug = "pytest tests -s"
+doctest = "pytest --doctest-modules"
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -41,6 +44,7 @@ poethepoet = "^0.16.4"
 pre-commit = "^2.20.0"
 black = "^22.10.0"
 pylint = "^2.15.6"
+pytest = "^7.2.0"
 
 [build-system]
 requires = ["poetry-core"]
