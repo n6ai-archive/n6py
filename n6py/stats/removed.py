@@ -17,9 +17,9 @@ def removed(
 
     Parameters
     ----------
-    new : int, Sequence or Collection
+    new : int, Sequence, Collection, NDArray, pd.Series or pd.DataFrame
         Number of new values or new values.
-    old : int, Sequence or Collection
+    old : int, Sequence, Collection, NDArray, pd.Series or pd.DataFrame
         Number of new values or new values.
 
     Returns
