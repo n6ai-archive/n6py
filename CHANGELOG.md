@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.9](https://github.com/n6ai/n6py/compare/v0.1.8...v0.1.9) (2022-11-27)
+
+
+### Features
+
+* require at least python version 3.8 ([3c6d135](https://github.com/n6ai/n6py/commit/3c6d135b759e795181492be7a6c983d1d7a86e76))
+
 ## [0.1.8](https://github.com/n6ai/n6py/compare/v0.1.7...v0.1.8) (2022-11-26)
 
 
