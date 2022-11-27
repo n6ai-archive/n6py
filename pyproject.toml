@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "n6py"
-version = "0.1.8"
+version = "0.1.9"
 description = "N6 AI Python Tools"
 authors = ["Sergej Samsonenko <contact@sergej.codes>"]
 license = "MIT"
