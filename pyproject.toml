@@ -34,7 +34,7 @@ format = "black ."
 lint = "pylint n6py tests"
 test = "pytest tests"
 test-debug = "pytest tests -s"
-doctest = "pytest --doctest-modules"
+doctest = "pytest n6py --doctest-modules"
 
 [tool.poetry.dependencies]
 python = "^3.8"
