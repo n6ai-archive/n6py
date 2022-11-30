@@ -12,14 +12,14 @@ def num_changed(
     current: Union[int, Sequence, Collection, NDArray, pd.Series, pd.DataFrame],
 ):
     """
-    Return a stats string about the difference between the old value and the new one.
+    Return a stats string about the difference between the previous value and the current one.
 
     Parameters
     ----------
     previous : int, Sequence, Collection, NDArray, pd.Series or pd.DataFrame
-        Number of new values or new values.
+        Number of previous values or previous values.
     current : int, Sequence, Collection, NDArray, pd.Series or pd.DataFrame
-        Number of new values or new values.
+        Number of current values or current values.
 
     Returns
     -------
