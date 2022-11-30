@@ -38,10 +38,12 @@ def num_changed(
     """
     T = (Sequence, Collection, np.ndarray, pd.Series, pd.DataFrame)
 
-    c_previous = len(previous) if isinstance(previous, T) else previous
-    c_current = len(current) if isinstance(current, T) else current
+    previous = len(previous) if isinstance(previous, T) else previous
+    current = len(current) if isinstance(current, T) else current
 
-    c_num = abs(c_current - c_previous)
-    c_percentage = c_num / c_previous * 100
+    num = abs(current - previous)
+    percentage = num / previous * 100
 
-    return f"Current: {c_current} - Previous: {c_previous} | Change: {c_num} - {c_percentage:.2f}%"
+    return (
+        f"Current: {current} - Previous: {previous} | Change: {num} - {percentage:.2f}%"
+    )
