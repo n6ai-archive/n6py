@@ -1,6 +1,5 @@
-"""
-split_most_common module
-"""
+"""split_most_common module"""
+
 from collections import Counter
 from typing import Union
 
