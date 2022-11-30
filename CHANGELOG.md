@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.10](https://github.com/n6ai/n6py/compare/v0.1.9...v0.1.10) (2022-11-30)
+
+
+### Features
+
+* rework removed module to num_changed ([6855777](https://github.com/n6ai/n6py/commit/6855777db1c078160799b273a79e8f7288391f26))
+
 ## [0.1.9](https://github.com/n6ai/n6py/compare/v0.1.8...v0.1.9) (2022-11-27)
 
 
