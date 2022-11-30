@@ -28,13 +28,13 @@ def num_changed(
 
     Examples
     --------
-    >>> rm_stat = num_changed(50, 100)
+    >>> rm_stat = num_changed(100, 50)
     >>> print(rm_stat)
-    Remaining: 50/100 | Removed: 50 - 50.00%
+    Current: 50 - Previous: 100 | Change: 50 - 50.00%
 
-    >>> rm_stat = num_changed([1, 2], [1, 2, 3, 4])
+    >>> rm_stat = num_changed([1, 2, 3, 4], [1, 2])
     >>> print(rm_stat)
-    Remaining: 2/4 | Removed: 2 - 50.00%
+    Current: 2 - Previous: 4 | Change: 2 - 50.00%
     """
     T = (Sequence, Collection, np.ndarray, pd.Series, pd.DataFrame)
 
