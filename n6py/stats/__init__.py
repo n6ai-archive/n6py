@@ -1,4 +1,4 @@
 """
-Stats module
+stats module
 """
-from .removed import removed
+from .num_changed import num_changed
