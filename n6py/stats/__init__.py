@@ -1,2 +1,2 @@
 """stats module"""
-from .num_changed import num_changed
+from .n_changed import n_changed

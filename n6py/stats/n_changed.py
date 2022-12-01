@@ -1,4 +1,4 @@
-"""num_changed module"""
+"""n_changed module"""
 
 from typing import Collection, Sequence, Union
 
@@ -7,7 +7,7 @@ import pandas as pd
 from numpy.typing import NDArray
 
 
-def num_changed(
+def n_changed(
     previous: Union[int, Sequence, Collection, NDArray, pd.Series, pd.DataFrame],
     current: Union[int, Sequence, Collection, NDArray, pd.Series, pd.DataFrame],
 ):
@@ -28,11 +28,11 @@ def num_changed(
 
     Examples
     --------
-    >>> rm_stat = num_changed(100, 50)
+    >>> rm_stat = n_changed(100, 50)
     >>> print(rm_stat)
     Current: 50 - Previous: 100 | Change: 50 - 50.00%
 
-    >>> rm_stat = num_changed([1, 2, 3, 4], [1, 2])
+    >>> rm_stat = n_changed([1, 2, 3, 4], [1, 2])
     >>> print(rm_stat)
     Current: 2 - Previous: 4 | Change: 2 - 50.00%
     """
