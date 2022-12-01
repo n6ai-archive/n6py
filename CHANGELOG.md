@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.11](https://github.com/n6ai/n6py/compare/v0.1.10...v0.1.11) (2022-12-01)
+
+
+### Features
+
+* change num_changed to n_changed ([fe341e4](https://github.com/n6ai/n6py/commit/fe341e4eb235025e38862a9055e0cd0b856fc5d3))
+
 ## [0.1.10](https://github.com/n6ai/n6py/compare/v0.1.9...v0.1.10) (2022-11-30)
 
 
