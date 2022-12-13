@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.12](https://github.com/n6ai/n6py/compare/v0.1.11...v0.1.12) (2022-12-13)
+
+
+### Features
+
+* use shorter arg names ([29008f7](https://github.com/n6ai/n6py/commit/29008f7ddd8eb582d7ec16abc9010e8a06e1160c))
+
 ## [0.1.11](https://github.com/n6ai/n6py/compare/v0.1.10...v0.1.11) (2022-12-01)
 
 
