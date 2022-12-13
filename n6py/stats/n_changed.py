@@ -8,17 +8,17 @@ from numpy.typing import NDArray
 
 
 def n_changed(
-    previous: Union[int, Sequence, Collection, NDArray, pd.Series, pd.DataFrame],
-    current: Union[int, Sequence, Collection, NDArray, pd.Series, pd.DataFrame],
+    prev: Union[int, Sequence, Collection, NDArray, pd.Series, pd.DataFrame],
+    curr: Union[int, Sequence, Collection, NDArray, pd.Series, pd.DataFrame],
 ):
     """
     Return a stats string about the difference between the previous value and the current one.
 
     Parameters
     ----------
-    previous : int, Sequence, Collection, NDArray, pd.Series or pd.DataFrame
+    prev : int, Sequence, Collection, NDArray, pd.Series or pd.DataFrame
         Number of previous values or previous values.
-    current : int, Sequence, Collection, NDArray, pd.Series or pd.DataFrame
+    curr : int, Sequence, Collection, NDArray, pd.Series or pd.DataFrame
         Number of current values or current values.
 
     Returns
@@ -38,12 +38,10 @@ def n_changed(
     """
     T = (Sequence, Collection, np.ndarray, pd.Series, pd.DataFrame)
 
-    previous = len(previous) if isinstance(previous, T) else previous
-    current = len(current) if isinstance(current, T) else current
+    prev = len(prev) if isinstance(prev, T) else prev
+    curr = len(curr) if isinstance(curr, T) else curr
 
-    num = abs(current - previous)
-    percentage = num / previous * 100
+    num = abs(curr - prev)
+    percentage = num / prev * 100
 
-    return (
-        f"Current: {current} - Previous: {previous} | Change: {num} - {percentage:.2f}%"
-    )
+    return f"Current: {curr} - Previous: {prev} | Change: {num} - {percentage:.2f}%"
