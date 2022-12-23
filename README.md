@@ -8,7 +8,17 @@
 
 N6 AI Python Utility Tools for Scientific Computing, Machine Learning and Deep Learning.
 
-## Installing
+## Installation
+
+### Cloud
+
+**Colab**
+
+```sh
+!pip install n6py --no-deps
+```
+
+### Local
 
 **pip**
 
@@ -22,15 +32,9 @@ pip install n6py
 poerty add n6py
 ```
 
-**Colab**
+## Usage
 
-```sh
-!pip install n6py --no-deps
-```
-
-## Using
-
-To use the `n6py` package import it into your project.
+To use the `n6py` package, import it into your project.
 
 ```py
 import n6py as n6
