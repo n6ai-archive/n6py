@@ -1,0 +1,19 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/python:3.9",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/poetry:1": {}
+  },
+  "waitFor": "onCreateCommand",
+  "onCreateCommand": {
+    "venv": "poetry config virtualenvs.in-project true",
+    "install": "poetry install --no-root"
+  },
+  "postCreateCommand": {
+    "pre-commit": "poetry run pre-commit install"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"]
+    }
+  }
+}
