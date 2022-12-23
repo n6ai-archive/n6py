@@ -3,6 +3,7 @@ tasks:
       poetry config virtualenvs.in-project true &&
       poetry install &&
       poetry run pre-commit install
+
 github:
   prebuilds:
     master: false
