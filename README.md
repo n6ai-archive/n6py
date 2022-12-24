@@ -26,13 +26,13 @@ Python Power Tools for Scientific Computing, Machine Learning and Deep Learning.
 - 📦 Modular - Pick and choose which modules to import to suit your needs.
 - 🎲 Framework Agnostic - Use n6py with many common frameworks - NumPy, Pandas, etc ...
 
-## Installaling
+## Installation
 
 ```sh
 pip install n6py
 ```
 
-## Importing
+## Import
 
 ```py
 import n6py as n6
