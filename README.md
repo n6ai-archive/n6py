@@ -32,9 +32,7 @@ Python Power Tools for Scientific Computing, Machine Learning and Deep Learning.
 pip install n6py
 ```
 
-## Using
-
-To use the `n6py` package, import it into your project.
+## Importing
 
 ```py
 import n6py as n6
