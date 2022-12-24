@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://py.n6.ai" target="_blank" rel="noopener noreferrer">
-    <img src=".github/logo.svg" alt="n6py" width="180" height="auto">
+    <img src=".github/logo.svg" alt="n6py" width="150" height="auto">
   </a>
 </p>
 
@@ -11,7 +11,7 @@
 [![PyPI Latest Release](https://img.shields.io/pypi/v/n6py?color=%23141414&style=for-the-badge)](https://pypi.org/project/n6py)
 [![PyPI Python Version](https://img.shields.io/pypi/pyversions/n6py?color=%23141414&style=for-the-badge)](https://pypi.org/project/n6py)
 
-> Python Power Tools for Scientific Computing, Machine Learning and Deep Learning.
+> 🐍 Python Power Tools for Scientific Computing, Machine Learning and Deep Learning.
 
 ## Installation
 
