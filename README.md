@@ -19,7 +19,7 @@ Python Power Tools for Scientific Computing, Machine Learning and Deep Learning.
 
 ## Try Online
 
-Click one of the icons to start with a fresh copy of n6py in an online environment.
+Click one of the icons to start with a fresh copy of `n6py` in an online environment.
 
 <table>
   <tbody>
