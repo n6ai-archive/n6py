@@ -72,17 +72,17 @@ poetry shell
 
 ## Commands
 
-| Command                | Action                                    |
-| :--------------------- | :---------------------------------------- |
-| `poe format`           | Runs black                                |
-| `poe lint`             | Runs pylint                               |
-| `poe test`             | Runs pytest                               |
-| `poe test-debug`       | Runs pytest with print statements enabled |
-| `poe doctest`          | Runs doc tests on all n6py files          |
-| `npm run docs`         | Starts a dev server for docs              |
-| `npm run docs-build`   | Builds the docs                           |
-| `npm run docs-preview` | Serves the built docs                     |
-| `npm run format`       | Runs black and prettier                   |
+| Command                     | Action                                    |
+| :-------------------------- | :---------------------------------------- |
+| `poetry run poe format`     | Runs black                                |
+| `poetry run poe lint`       | Runs pylint                               |
+| `poetry run poe test`       | Runs pytest                               |
+| `poetry run poe test-debug` | Runs pytest with print statements enabled |
+| `poetry run poe doctest`    | Runs doc tests on all n6py files          |
+| `npm run docs`              | Starts a dev server for docs              |
+| `npm run docs-build`        | Builds the docs                           |
+| `npm run docs-preview`      | Serves the built docs                     |
+| `npm run format`            | Runs black and prettier                   |
 
 ## Pull Request Guidelines
 
