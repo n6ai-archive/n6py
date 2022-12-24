@@ -28,9 +28,9 @@ python --version
 
 :::
 
-## Installing
+## Installation
 
-To get started you have to install `n6py` with your prefered package manager.
+To get started you have to install `n6py` with your preferred package manager.
 
 ::: warning
 Cloud Notebook environments like Google Colab don't run the latest Python version required for some libraries like NumPy and Pandas that are bundled with n6py. You have to pass the `--no-deps` flag to prevent n6py from updating those libraries.
@@ -60,7 +60,7 @@ poetry add n6py
 
 :::
 
-## Importing
+## Import
 
 You can either import the entire package, specific modules or functions.
 
@@ -80,7 +80,7 @@ from n6py.stats import n_changed
 
 :::
 
-## Using
+## Usage
 
 ::: code-group
 

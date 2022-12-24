@@ -8,7 +8,7 @@ from n6py import stats
 
 ## n_changed <Badge type="tip" text="0.1.12" />
 
-Returns a stats string about the difference between the previous value and the current one.
+Returns a stats string about the difference between the previous and current values.
 
 - **path:** `n6py.stats.n_changed`
 - **args:** `prev`, `curr`
