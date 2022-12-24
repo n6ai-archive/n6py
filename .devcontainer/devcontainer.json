@@ -5,12 +5,11 @@
   },
   "waitFor": "onCreateCommand",
   "onCreateCommand": {
-    "venv": "poetry config virtualenvs.in-project true",
-    "poetry-install": "poetry install --no-root",
-    "npm-install": "npm install"
+    "venv": "poetry config virtualenvs.in-project true"
   },
   "postCreateCommand": {
-    "pre-commit": "poetry run pre-commit install"
+    "poetry-install": "poetry install --no-root",
+    "npm-install": "npm install"
   },
   "customizations": {
     "vscode": {
