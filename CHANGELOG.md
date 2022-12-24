@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.13](https://github.com/n6ai/n6py/compare/v0.1.12...v0.1.13) (2022-12-24)
+
+
+### Documentation
+
+* fix scrollbar track color ([ac83946](https://github.com/n6ai/n6py/commit/ac83946943c570166ba63ff4d17bbd1fef4a6a38))
+* fix typo ([0324b0d](https://github.com/n6ai/n6py/commit/0324b0d0c5dbcc2dc7398cfb973d745d3a878d86))
+* fix typos and imporve wording ([6a8a286](https://github.com/n6ai/n6py/commit/6a8a28669e1a201fbaa0b93b94e213e4f81e1f12))
+* update quickstart ([65d6a0c](https://github.com/n6ai/n6py/commit/65d6a0cbd163729d1a07448ad22addf0376d6f0e))
+
 ## [0.1.12](https://github.com/n6ai/n6py/compare/v0.1.11...v0.1.12) (2022-12-13)
 
 
