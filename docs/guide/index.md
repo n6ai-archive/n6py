@@ -6,7 +6,7 @@ Follow the instructions below to get started.
 
 Click on the badge to open a demo notebook in Google Colab.
 
-[![Open In Colab](https://img.shields.io/badge/Open%20In%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252)](https://colab.research.google.com/github/n6ai/n6py/blob/main/notebooks/n6py-demo-colab.ipynb)
+[![Open In Colab](https://img.shields.io/badge/Open%20In%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252)](https://colab.research.google.com/github/n6ai/n6py/blob/main/notebooks/n6py-demo.ipynb)
 
 ## Prerequisites
 
