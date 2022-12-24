@@ -21,6 +21,8 @@ repo/                      📁 root directory
 
 Get started on a remote machine.
 
+> You have to use the `--host` flag when working with vite inside a remote continer `npm run docs -- --host`
+
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=568493639)
 
 ### Local
