@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "n6py"
 version = "0.1.12"
-description = "N6 AI Python Utility Tools for Scientific Computing, Machine Learning and Deep Learning."
+description = "Python Power Tools for Scientific Computing, Machine Learning and Deep Learning."
 authors = ["Sergej Samsonenko <contact@sergej.codes>"]
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/n6ai/n6py"
+homepage = "https://py.n6.ai"
 repository = "https://github.com/n6ai/n6py"
-documentation = "https://github.com/n6ai/n6py"
+documentation = "https://py.n6.ai"
 keywords = ["n6py", "ai", "artificial intelligence", "dl", "deep learning", "ml", "machine learning", "jupyter", "notebook"]
 classifiers = [
     "Development Status :: 1 - Planning",
@@ -44,7 +44,6 @@ pandas = "^1.5.2"
 [tool.poetry.group.dev.dependencies]
 black = {extras = ["jupyter"], version = "^22.12.0"}
 poethepoet = "^0.16.4"
-pre-commit = "^2.20.0"
 pylint = "^2.15.6"
 pytest = "^7.2.0"
 

@@ -2,12 +2,28 @@
   "name": "n6py",
   "private": true,
   "scripts": {
-    "docs-dev": "vitepress dev docs",
+    "docs": "vitepress dev docs",
     "docs-build": "vitepress build docs",
     "docs-preview": "vitepress preview docs",
-    "format": "npx prettier --write --cache ."
+    "format": "(poe format) && (prettier --write --cache .)",
+    "postinstall": "simple-git-hooks"
   },
   "devDependencies": {
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1",
+    "simple-git-hooks": "^2.8.1",
     "vitepress": "^1.0.0-alpha.33"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "commit-msg": "npx @n6ai/verify-commit-msg@latest $1"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --cache --ignore-unknown"
+    ],
+    "**/*.{py,ipynb}": [
+      "poe format"
+    ]
   }
 }
