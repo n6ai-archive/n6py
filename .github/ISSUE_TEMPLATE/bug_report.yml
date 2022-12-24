@@ -26,7 +26,7 @@ body:
     id: platform
     attributes:
       label: OS Platform and Distribution
-      description: Please provide the Operating System and distribution verion as well as number.
+      description: Please provide the Operating System and distribution version.
       placeholder: Linux Ubuntu 21.0
     validations:
       required: true
