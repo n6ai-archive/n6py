@@ -19,6 +19,8 @@ Python Power Tools for Scientific Computing, Machine Learning and Deep Learning.
 
 ## Try Online
 
+Click one of the icons to start with a fresh copy of n6py in an online environment.
+
 <table>
   <tbody>
     <tr>
@@ -26,7 +28,6 @@ Python Power Tools for Scientific Computing, Machine Learning and Deep Learning.
         <a href="https://colab.research.google.com/github/n6ai/n6py/blob/main/notebooks/n6py-demo.ipynb">
           <div align="center">
             <img height="32" src=".github/img/colab.svg" />
-            <div>Colab</div>
           </div>
         </a>
       </td>
@@ -34,7 +35,6 @@ Python Power Tools for Scientific Computing, Machine Learning and Deep Learning.
         <a href="https://mybinder.org/v2/git/https%3A%2F%2Fgithub.com%2Fn6ai%2Fn6py/HEAD?labpath=%2Fnotebooks%2Fn6py-demo.ipynb">
           <div align="center">
             <img height="32" src=".github/img/binder.svg" />
-            <div>binder</div>
           </div>
         </a>
       </td>
@@ -42,7 +42,6 @@ Python Power Tools for Scientific Computing, Machine Learning and Deep Learning.
         <a href="https://kaggle.com/kernels/welcome?src=https://github.com/n6ai/n6py/blob/main/notebooks/n6py-demo.ipynb">
           <div align="center">
             <img height="32" src=".github/img/kaggle.svg" />
-            <div>kaggle</div>
           </div>
         </a>
       </td>
