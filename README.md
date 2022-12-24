@@ -11,33 +11,28 @@
 [![PyPI Latest Release](https://img.shields.io/pypi/v/n6py?color=%23141414&style=for-the-badge)](https://pypi.org/project/n6py)
 [![PyPI Python Version](https://img.shields.io/pypi/pyversions/n6py?color=%23141414&style=for-the-badge)](https://pypi.org/project/n6py)
 
-> Python Power Tools for Scientific Computing, Machine Learning and Deep Learning.
+> AI Power Tools
 
-## Installation
+Python Power Tools for Scientific Computing, Machine Learning and Deep Learning.
 
-### Cloud
+[Read the Docs to Learn More](https://py.n6.ai).
 
-**Colab**
+## Features
 
-```sh
-!pip install n6py --no-deps
-```
+- 🐍 Python - Utility library for AI Python projects.
+- 📃 Jupyter Notebooks - Designed for use inside Jupyter Notebooks but also works in regular .py files.
+- ☁️ Cloud - Notebook Cloud Environment compatible e.g. Google Colab.
+- 👶 Simple - Dive right in by adding n6py package to your project via pip.
+- 📦 Modular - Pick and choose which modules to import to suit your needs.
+- 🎲 Framework Agnostic - Use n6py with many common frameworks - NumPy, Pandas, etc ...
 
-### Local
-
-**pip**
+## Installaling
 
 ```sh
 pip install n6py
 ```
 
-**Poetry**
-
-```sh
-poerty add n6py
-```
-
-## Usage
+## Using
 
 To use the `n6py` package, import it into your project.
 
@@ -45,47 +40,10 @@ To use the `n6py` package, import it into your project.
 import n6py as n6
 ```
 
-## Development
+## Contribution
 
-### Cloud
+See [Contributing Guide](https://github.com/n6ai/n6py/blob/main/.github/CONTRIBUTING.md).
 
-Get started on a remote machine.
+## License
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=568493639)
-
-### Local
-
-Get started on a local machine.
-
-<details>
-<summary>Steps</summary>
-
-#### Prerequisites
-
-- [Python v3+](https://www.python.org/downloads/)
-- [Poetry](https://python-poetry.org/)
-
-Set the following environment variables for Poetry:
-
-```sh
-poetry config virtualenvs.in-project true
-```
-
-#### Installing
-
-Install all dependencies and create a `venv` with Poetry. Additionaly add pre-commit hooks.
-
-```sh
-poetry install
-poetry run pre-commit install
-```
-
-</details>
-
-### Use venv
-
-> The `venv` is automatically activated in `VS Code` when opening a new terminal window. You don't need to run the poetry shell command manually, simply open a new terminal after the dependencies are installed.
-
-```sh
-poetry shell
-```
+MIT
