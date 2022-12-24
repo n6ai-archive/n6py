@@ -1,13 +1,13 @@
 import { defineConfig } from 'vitepress'
-import sidebar from './sidebar'
+import { sidebar } from './sidebar'
+import { META_TITLE, META_DESCRIPTION, head } from './head'
 
 export default defineConfig({
   lang: 'en-US',
-  title: 'n6py',
-  description:
-    'Python Power Tools for Scientific Computing, Machine Learning and Deep Learning.',
+  title: META_TITLE,
+  description: META_DESCRIPTION,
 
-  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
+  head,
 
   themeConfig: {
     logo: '/logo.svg',
