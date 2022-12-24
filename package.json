@@ -1,0 +1,13 @@
+{
+  "name": "n6py",
+  "private": true,
+  "scripts": {
+    "docs-dev": "vitepress dev docs",
+    "docs-build": "vitepress build docs",
+    "docs-preview": "vitepress preview docs",
+    "format": "npx prettier --write --cache ."
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.33"
+  }
+}

@@ -1,0 +1,11 @@
+h1.name {
+  margin-bottom: 5px !important;
+}
+
+.VPHomeHero .image-src {
+  filter: drop-shadow(0 0 15px rgb(200 200 255 / 100%));
+}
+
+html.dark .VPHomeHero .image-src {
+  filter: drop-shadow(0 0 15px rgb(60 80 215 / 100%));
+}
