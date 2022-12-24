@@ -10,7 +10,7 @@
 
 [![PyPI Latest Release](https://img.shields.io/pypi/v/n6py?color=%23141414&style=for-the-badge)](https://pypi.org/project/n6py)
 [![PyPI Python Version](https://img.shields.io/pypi/pyversions/n6py?color=%23141414&style=for-the-badge)](https://pypi.org/project/n6py)
-[![Open In Colab](https://img.shields.io/badge/Open%20In%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252)](https://colab.research.google.com/github/n6ai/n6py/notebooks/demo-colab.ipynb)
+[![Open Demo In Colab](https://img.shields.io/badge/Open%20Demo%20In%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252)](https://colab.research.google.com/github/n6ai/n6py/notebooks/demo-colab.ipynb)
 
 > AI Power Tools
 
