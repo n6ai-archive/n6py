@@ -12,7 +12,7 @@ def n_changed(
     curr: Union[int, Sequence, Collection, NDArray, pd.Series, pd.DataFrame],
 ):
     """
-    Returns a stats string about the difference between the previous value and the current one.
+    Returns a stats string about the difference between the previous and current values.
 
     Parameters
     ----------
