@@ -25,6 +25,7 @@ jobs:
           release-type: python
           release-as: ${{ github.event.inputs.version }}
           bump-patch-for-minor-pre-major: true
+          changelog-types: '[{"type":"docs","hidden":true}]'
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
 
