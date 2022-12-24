@@ -24,17 +24,26 @@ Python Power Tools for Scientific Computing, Machine Learning and Deep Learning.
     <tr>
       <td>
         <a href="https://colab.research.google.com/github/n6ai/n6py/blob/main/notebooks/n6py-demo-colab.ipynb">
-          <img height="36" src=".github/img/colab.svg" />
+          <div align="center">
+            <img height="36" src=".github/img/colab.svg" />
+            <div>Colab</div>
+          </div>
         </a>
       </td>
       <td>
         <a href="https://mybinder.org/v2/git/https%3A%2F%2Fgithub.com%2Fn6ai%2Fn6py/HEAD?labpath=%2Fnotebooks%2Fn6py-demo-colab.ipynb">
-          <img height="36" src=".github/img/binder.svg" />
+          <div align="center">
+            <img height="36" src=".github/img/binder.svg" />
+            <div>binder</div>
+          </div>
         </a>
       </td>
       <td>
         <a href="https://kaggle.com/kernels/welcome?src=https://github.com/n6ai/n6py/blob/main/notebooks/n6py-demo-colab.ipynb">
-          <img height="36" src=".github/img/kaggle.svg" />
+          <div align="center">
+            <img height="36" src=".github/img/kaggle.svg" />
+            <div>kaggle</div>
+          </div>
         </a>
       </td>
     </tr>
