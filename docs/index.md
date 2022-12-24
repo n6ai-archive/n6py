@@ -24,20 +24,20 @@ hero:
 features:
   - icon: 🐍
     title: Python
-    details: Utility library for AI projects done in Python.
+    details: Utility library for AI Python projects.
   - icon: 📃
-    title: Jupyter Notebook
-    details: Designed for use inside Jupyter Notebooks.
+    title: Jupyter Notebooks
+    details: Designed for use inside Jupyter Notebooks but also works in regular .py files.
   - icon: ☁️
     title: Cloud
-    details: Use it inside Notebook cloud environments like Google Colab.
+    details: Notebook Cloud Environment compatible e.g. Google Colab.
   - icon: 👶
     title: Simple
-    details: Dive right in by adding n6py to your project.
+    details: Dive right in by adding n6py package to your project via pip.
   - icon: 📦
     title: Modular
-    details: Pick and choose what modules to import to suit your needs.
+    details: Pick and choose which modules to import to suit your needs.
   - icon: 🎲
     title: Framework Agnostic
-    details: Use n6py with any common framework - NumPy, Pandas, etc ...
+    details: Use n6py with many common frameworks - NumPy, Pandas, etc ...
 ---
