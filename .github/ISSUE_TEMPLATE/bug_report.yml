@@ -34,7 +34,7 @@ body:
     id: python-version
     attributes:
       label: Python version
-      description: Please provide the Python version.
+      description: Please provide the Python version. You can check it within a terminal with `python --version`
       placeholder: 3.9.0.
     validations:
       required: true
