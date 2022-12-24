@@ -1,12 +1,17 @@
-# N6 Py
+&nbsp;
+
+<p align="center">
+  <a href="https://py.n6.ai" target="_blank" rel="noopener noreferrer">
+    <img src=".github/logo.svg" alt="n6py" width="180" height="auto">
+  </a>
+</p>
+
+# n6py
 
 [![PyPI Latest Release](https://img.shields.io/pypi/v/n6py?color=%23141414&style=for-the-badge)](https://pypi.org/project/n6py)
 [![PyPI Python Version](https://img.shields.io/pypi/pyversions/n6py?color=%23141414&style=for-the-badge)](https://pypi.org/project/n6py)
-[![Package Status](https://img.shields.io/pypi/status/n6py?color=%23141414&style=for-the-badge)](https://pypi.org/project/n6py)
 
-## About
-
-N6 AI Python Utility Tools for Scientific Computing, Machine Learning and Deep Learning.
+> Python Power Tools for Scientific Computing, Machine Learning and Deep Learning.
 
 ## Installation
 
