@@ -19,7 +19,7 @@ Python Power Tools for Scientific Computing, Machine Learning and Deep Learning.
 
 ## Try n6py online
 
-| <a href="https://colab.research.google.com/github/n6ai/n6py/blob/main/notebooks/n6py-demo-colab.ipynb"><img height="48" src=".github/img/colab.svg" /></a> | <a href="https://mybinder.org/v2/git/https%3A%2F%2Fgithub.com%2Fn6ai%2Fn6py/HEAD?labpath=%2Fnotebooks%2Fn6py-demo-colab.ipynb"><img height="48" src=".github/img/binder.svg" /></a> | <a href="https://kaggle.com/kernels/welcome?src=https://github.com/n6ai/n6py/blob/main/notebooks/n6py-demo-colab.ipynb"><img height="48" src=".github/img/kaggle.svg" /></a> |
+| <a href="https://colab.research.google.com/github/n6ai/n6py/blob/main/notebooks/n6py-demo-colab.ipynb"><img height="36" src=".github/img/colab.svg" /></a> | <a href="https://mybinder.org/v2/git/https%3A%2F%2Fgithub.com%2Fn6ai%2Fn6py/HEAD?labpath=%2Fnotebooks%2Fn6py-demo-colab.ipynb"><img height="36" src=".github/img/binder.svg" /></a> | <a href="https://kaggle.com/kernels/welcome?src=https://github.com/n6ai/n6py/blob/main/notebooks/n6py-demo-colab.ipynb"><img height="36" src=".github/img/kaggle.svg" /></a> |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## Features
