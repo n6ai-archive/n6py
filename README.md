@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://py.n6.ai" target="_blank" rel="noopener noreferrer">
-    <img src=".github/logo.svg" alt="n6py" width="125" height="auto">
+    <img src=".github/img/n6py.svg" alt="n6py" width="125" height="auto">
   </a>
 </p>
 
@@ -19,11 +19,8 @@ Python Power Tools for Scientific Computing, Machine Learning and Deep Learning.
 
 ## Try n6py online
 
-|                                                                                     | Site                                                                                                                               |
-| ----------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- |
-| <img height="32" width="32" src="https://cdn.simpleicons.org/googlecolab/faaa00" /> | [Google Colab](https://colab.research.google.com/github/n6ai/n6py/blob/main/notebooks/n6py-demo-colab.ipynb)                       |
-| <img height="32" width="32" src="https://cdn.simpleicons.org/jupyter/e67328" />     | [JupyterLab](https://mybinder.org/v2/git/https%3A%2F%2Fgithub.com%2Fn6ai%2Fn6py/HEAD?labpath=%2Fnotebooks%2Fn6py-demo-colab.ipynb) |
-| <img height="32" width="32" src="https://cdn.simpleicons.org/kaggle/37b9e6" />      | [Kaggle](https://kaggle.com/kernels/welcome?src=https://github.com/n6ai/n6py/blob/main/notebooks/n6py-demo-colab.ipynb)            |
+| <a href="https://colab.research.google.com/github/n6ai/n6py/blob/main/notebooks/n6py-demo-colab.ipynb"><img height="48" src=".github/img/colab.svg" /></a> | <a href="https://mybinder.org/v2/git/https%3A%2F%2Fgithub.com%2Fn6ai%2Fn6py/HEAD?labpath=%2Fnotebooks%2Fn6py-demo-colab.ipynb"><img height="48" src=".github/img/binder.svg" /></a> | <a href="https://kaggle.com/kernels/welcome?src=https://github.com/n6ai/n6py/blob/main/notebooks/n6py-demo-colab.ipynb"><img height="48" src=".github/img/kaggle.svg" /></a> |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## Features
 
