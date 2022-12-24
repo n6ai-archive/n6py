@@ -72,6 +72,8 @@ poetry shell
 
 ## Commands
 
+> If you are inside a venv in the terminal, you can ommit `poetry run` and run commands only with `poe` e.g. `poe format`
+
 | Command                     | Action                                    |
 | :-------------------------- | :---------------------------------------- |
 | `poetry run poe format`     | Runs black                                |
