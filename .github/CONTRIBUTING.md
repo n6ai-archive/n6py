@@ -1,6 +1,21 @@
 # n6py Contributing Guide
 
-## Development
+Welcome to the Contributing Guide! Glad you decided to contribute to n6py. Before submitting your contribution, please read the following guide:
+
+## Structure
+
+When first starting out, you will likely be focused on the following directories:
+
+```
+repo/                      📁 root directory
+├── docs/                  📁 documentation
+├── n6py/                  📁 main n6py package
+├── notebooks/             📁 jupyter notebooks
+├── tests/                 📁 n6py tests
+└── ...
+```
+
+## Quick Start
 
 ### Cloud
 
@@ -27,14 +42,17 @@ Set the following environment variables for Poetry:
 poetry config virtualenvs.in-project true
 ```
 
-#### Installing
+#### Install Python dependencies
 
-Install all dependencies and create a `venv` with Poetry. Additionaly add pre-commit hooks.
+Install all dependencies and create a `venv` with Poetry.
 
 ```sh
 poetry install
-poetry run pre-commit install
 ```
+
+#### Install Node.js dependencies
+
+> git hooks are automatically added after npm installs all dependencies.
 
 ```sh
 npm install
@@ -49,3 +67,40 @@ npm install
 ```sh
 poetry shell
 ```
+
+## Commands
+
+| Command               | Action                                    |
+| :-------------------- | :---------------------------------------- |
+| `poe format`          | Runs black                                |
+| `poe lint`            | Runs pylint                               |
+| `poe test`            | Runs pytest                               |
+| `poe test-debug`      | Runs pytest with print statements enabled |
+| `poe doctest`         | Runs doc tests on all n6py files          |
+| `npm run doc`         | Starts a dev server for docs              |
+| `npm run doc-build`   | Builds the docs                           |
+| `npm run doc-preview` | Serves the built docs                     |
+| `npm run format`      | Runs black and prettier                   |
+
+## Pull Request Guidelines
+
+- Checkout a topic branch from a base branch, e.g. `main`, and merge back against that branch.
+
+- If adding a new feature:
+
+  - Add accompanying test case in [tests](https://github.com/n6ai/n6py/tree/main/tests).
+  - Provide a convincing reason to add this feature. Ideally, you should open a suggestion issue first and have it approved before working on it.
+
+- If fixing bug:
+
+  - If you are resolving a special issue, add `(fix #xxxx[,#xxxx])` (#xxxx is the issue id) in your PR title for a better release log, e.g. `fix: update entities encoding/decoding (fix #3899)`.
+  - Provide a detailed description of the bug in the PR.
+  - Add appropriate tests if applicable.
+
+- It's OK to have multiple small commits as you work on the PR - GitHub can automatically squash them before merging.
+
+- Make sure tests pass!
+
+- Commit messages must follow the [commit message convention](./COMMIT_CONVENTION.md) so that changelogs can be automatically generated. Commit messages are automatically validated before committing (by invoking [Git Hooks](https://git-scm.com/docs/githooks) via [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks).
+
+- No need to worry about code style as long as you installed the dev dependencies - modified files are automatically formatted with Prettier on commit (by invoking [Git Hooks](https://git-scm.com/docs/githooks) via [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks).
