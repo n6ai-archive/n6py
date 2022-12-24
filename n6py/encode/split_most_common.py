@@ -14,7 +14,7 @@ def split_most_common(
     remainder: Union[str, int, float, None] = "other",
 ) -> Union[list, tuple, NDArray, pd.Series]:
     """
-    Keep the x most common values and encode everything else as the provided remainder.
+    Keeps the x most common values and encodes everything else as the provided remainder.
 
     Parameters
     ----------

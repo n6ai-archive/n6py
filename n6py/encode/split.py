@@ -13,7 +13,7 @@ def split(
     remainder: Union[str, int, float, None] = "other",
 ) -> Union[list, tuple, NDArray, pd.Series]:
     """
-    Keep the provided values and encode everything else as the provided remainder.
+    Keeps the provided values and encodes everything else as the provided remainder.
 
     Parameters
     ----------
@@ -26,7 +26,7 @@ def split(
 
     Returns
     -------
-    list, tuple, NDArray :
+    list, tuple, NDArray, pd.Series :
         A processed list, tuple, numpy array or pandas series.
 
     Examples
