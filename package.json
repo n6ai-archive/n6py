@@ -2,6 +2,7 @@
   "name": "n6py",
   "private": true,
   "scripts": {
+    "dev": "npx nodemon playground/main.py -w n6py -w playground -e py -q",
     "docs": "vitepress dev docs",
     "docs-build": "vitepress build docs",
     "docs-preview": "vitepress preview docs",
