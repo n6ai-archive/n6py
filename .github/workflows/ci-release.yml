@@ -17,14 +17,12 @@ jobs:
     needs:
       - run-tests
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.version }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          ref: main # needs to be explicitly set to pull the latest changes
 
-      - name: Create Commit
+      - name: Create commit
+        if: ${{ github.event.inputs.version }}
         uses: ./.github/actions/ci-release-commit
         with:
           release-version: ${{ github.event.inputs.version }}
