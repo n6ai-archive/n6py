@@ -8,7 +8,7 @@
     "venv": "poetry config virtualenvs.in-project true"
   },
   "postCreateCommand": {
-    "poetry-install": "poetry install --no-root",
+    "poetry-install": "poetry install",
     "npm-install": "npm install"
   },
   "customizations": {
