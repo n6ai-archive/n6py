@@ -13,12 +13,14 @@ jobs:
   run-tests:
     uses: ./.github/workflows/ci-test.yml
 
+  # Allows to trigger release-please manually by creating an empty release commit
   create-release-commit:
     needs:
       - run-tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
+        if: ${{ github.event.inputs.version }}
         uses: actions/checkout@v3
 
       - name: Create commit
