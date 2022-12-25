@@ -3,6 +3,7 @@ name: CI Release Commit
 inputs:
   release-version:
     description: Package release version
+    required: false
 
 runs:
   using: composite
@@ -16,7 +17,7 @@ runs:
     - name: Git commit
       shell: bash
       run: |
-        git commit --allow-empty -m 'release(${{ inputs.release-version }}): manual release'
+        git commit --allow-empty -m 'release: manual release'
 
     - name: Push to repo
       shell: bash
