@@ -1,0 +1,23 @@
+name: CI Release Commit
+
+inputs:
+  release-version:
+    description: Package release version
+
+runs:
+  using: composite
+  steps:
+    - name: Set user
+      shell: bash
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+    - name: Git commit
+      shell: bash
+      run: |
+        git commit --allow-empty -m 'release(${{ inputs.release-version }}): manual release'
+
+    - name: Push to repo
+      shell: bash
+      run: git push origin main
