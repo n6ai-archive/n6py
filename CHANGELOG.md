@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.15](https://github.com/n6ai/n6py/compare/v0.1.14...v0.1.15) (2022-12-25)
+
+
+### Miscellaneous
+
+* **0.1.15:** manual release ([2cd194e](https://github.com/n6ai/n6py/commit/2cd194ebd48585baf163306b294280535f22dccc))
+
 ## [0.1.14](https://github.com/n6ai/n6py/compare/v0.1.13...v0.1.14) (2022-12-25)
 
 
