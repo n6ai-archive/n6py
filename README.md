@@ -27,21 +27,24 @@ Click one of the icons to start with a fresh copy of `n6py` in an online environ
       <td>
         <a href="https://colab.research.google.com/github/n6ai/n6py/blob/main/notebooks/n6py-demo.ipynb">
           <div align="center">
-            <img height="32" src="https://raw.githubusercontent.com/n6ai/n6py/main/.github/img/colab.svg" />
+            <img width="32" height="32" src="https://raw.githubusercontent.com/n6ai/n6py/main/.github/img/colab.svg" />
+            <div>Colab</div>
           </div>
         </a>
       </td>
       <td>
         <a href="https://mybinder.org/v2/git/https%3A%2F%2Fgithub.com%2Fn6ai%2Fn6py/HEAD?labpath=%2Fnotebooks%2Fn6py-demo.ipynb">
           <div align="center">
-            <img height="32" src="https://raw.githubusercontent.com/n6ai/n6py/main/.github/img/binder.svg" />
+            <img width="32" height="32" src="https://raw.githubusercontent.com/n6ai/n6py/main/.github/img/binder.svg" />
+            <div>Binder</div>
           </div>
         </a>
       </td>
       <td>
         <a href="https://kaggle.com/kernels/welcome?src=https://github.com/n6ai/n6py/blob/main/notebooks/n6py-demo.ipynb">
           <div align="center">
-            <img height="32" src="https://raw.githubusercontent.com/n6ai/n6py/main/.github/img/kaggle.svg" />
+            <img width="62" height="32" src="https://raw.githubusercontent.com/n6ai/n6py/main/.github/img/kaggle.svg" />
+            <div>Kaggle</div>
           </div>
         </a>
       </td>
