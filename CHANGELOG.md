@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.14](https://github.com/n6ai/n6py/compare/v0.1.13...v0.1.14) (2022-12-25)
+
+
+### Miscellaneous
+
+* manual ([39c367c](https://github.com/n6ai/n6py/commit/39c367c7c1081aecf674b572a8a9c12fb92868e5))
+
 ## [0.1.13](https://github.com/n6ai/n6py/compare/v0.1.12...v0.1.13) (2022-12-24)
 
 
