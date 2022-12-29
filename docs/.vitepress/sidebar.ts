@@ -21,6 +21,10 @@ export const sidebar: DefaultTheme.Sidebar = {
       text: 'API',
       items: [
         {
+          text: 'display',
+          link: '/api/display'
+        },
+        {
           text: 'encode',
           link: '/api/encode'
         },
