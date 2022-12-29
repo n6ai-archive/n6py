@@ -160,7 +160,7 @@ def html(
     Examples
     --------
     >>> content = "<h1>Hello World!</h1>"
-    >>> display_html(content)
+    >>> html(content)
     <IPython.core.display.HTML object>
     """
     preset = load
