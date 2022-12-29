@@ -5,6 +5,7 @@
 
 from typing import List, Union
 
+import re
 from IPython.display import display as IPythondisplay
 from IPython.core.display import HTML as IPythonHTML
 
@@ -97,13 +98,22 @@ class HTML:
         str :
             HTML document string.
         """
-        viewport = (
-            '<meta name="viewport" content="width=device-width,initial-scale=1.0">'
-        )
-        head = f'<head><meta charset="UTF-8">{viewport}{self._styles}{self._scripts}</head>'
-        body = f"<body>{content if content else ''}</body>"
+        template = f"""
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width,initial-scale=1.0">
+                {self._styles}
+                {self._scripts}
+            </head>
+            <body>
+                {content if content else ''}
+            </body>
+            </html>
+        """
 
-        return f'<!DOCTYPE html><html lang="en">{head}{body}</html>'
+        return re.sub(r"\n\s*", "", "".join(template))
 
     def display(self, content: Union[str, None] = None, raw: bool = False):
         """
