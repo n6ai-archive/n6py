@@ -32,7 +32,7 @@ Displays provided HTML string. Can be used with multiple CSS and JS libraries, b
 ```py
 (function) html(
   content: str | None,
-  load: Literal['alpine', 'alpine-tailwind', 'bootstrap', 'tailwind'] | None = None,
+  load: str | None = None,
   raw: bool = False
 ) -> (str | None)
 ```
