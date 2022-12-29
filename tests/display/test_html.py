@@ -1,4 +1,4 @@
-"""display_html unit test"""
+"""html unit test"""
 
 from n6py.display import html
 
