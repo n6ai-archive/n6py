@@ -6,14 +6,14 @@ A module to display content in Jupyter Notebooks.
 from n6py import display
 ```
 
-## display_html <Badge type="tip" text="0.1.16" />
+## html <Badge type="tip" text="0.1.16" />
 
-Displays provided HTML string. Can be used with multiple CSS and JS libraries, by defining a preset or loading them as ESModules.
+Displays provided HTML string. Can be used with multiple CSS and JS libraries, by defining a preset for the `load` parameter or loading them as e.g. ESModules.
 
-- **path:** `n6py.display.display_html`
-- **args:** `content`, `preset`, `raw`
+- **path:** `n6py.display.html`
+- **args:** `content`, `load`, `raw`
 
-::: details presets
+::: details load presets
 
 **Standalone**
 
@@ -30,40 +30,66 @@ Displays provided HTML string. Can be used with multiple CSS and JS libraries, b
 ::: details type
 
 ```py
-(function) display_html(
-  content: str,
-  preset: Literal['alpine', 'alpine-tailwind', 'bootstrap', 'tailwind'] | None = None,
+(function) html(
+  content: str | None,
+  load: Literal['alpine', 'alpine-tailwind', 'bootstrap', 'tailwind'] | None = None,
   raw: bool = False
 ) -> (str | None)
 ```
 
 :::
 
+::: warning
+If you intend to display html multiple times with one preset, then it's best to load the preset upfront only once.
+:::
+
 ::: code-group
 
 ```py [HTML]
-from n6py.display import display_html
+from n6py.display import html
 
 content = """
 <h1>Hello World!</h1>
 """
 
-display_html(content)
+html(content)
 ```
 
 ```py [Custom]
-from n6py.display import display_html
+from n6py.display import html
 
 content = """
 <h1>Hello World!</h1>
 <script src="https://cdn.tailwindcss.com"></script>
 """
 
-display_html(content)
+html(content)
+```
+
+```py [Multiple]
+from n6py.display import html
+
+html(laod="tailwind")
+
+content_1 = """
+<h1 class="text-3xl text-indigo-500 font-bold">
+  Hello World!
+</h1>
+"""
+
+html(content_1)
+
+content_2 = """
+<h1 class="text-3xl text-indigo-500 font-bold">
+  Hello World!
+</h1>
+"""
+
+html(content_2)
 ```
 
 ```py [Alpine.js]
-from n6py.display import display_html
+from n6py.display import html
 
 # https://alpinejs.dev/
 content = """
@@ -76,11 +102,11 @@ content = """
 </div>
 """
 
-display_html(content, "alpine")
+html(content, "alpine")
 ```
 
 ```py [Bootstrap]
-from n6py.display import display_html
+from n6py.display import html
 
 # https://getbootstrap.com/
 content = """
@@ -89,11 +115,11 @@ content = """
 </div>
 """
 
-display_html(content, "bootstrap")
+html(content, "bootstrap")
 ```
 
 ```py [Tailwind CSS]
-from n6py.display import display_html
+from n6py.display import html
 
 # https://tailwindcss.com/
 content = """
@@ -102,11 +128,11 @@ content = """
 </h1>
 """
 
-display_html(content, "tailwind")
+html(content, "tailwind")
 ```
 
 ```py [Vue.js]
-from n6py.display import display_html
+from n6py.display import html
 
 # https://vuejs.org/
 content = """
@@ -125,7 +151,7 @@ content = """
 </script>
 """
 
-display_html(content)
+html(content)
 ```
 
 ```py [Result]
