@@ -71,7 +71,7 @@ class HTML:
         """Creates HTML script tags."""
 
         def template(src):
-            return f'<script src="{src}" defer crossorigin></script>'
+            return f'<script src="{src}" defer></script>'
 
         result = ""
 
