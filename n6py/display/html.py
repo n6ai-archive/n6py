@@ -101,17 +101,17 @@ class HTML:
             '<meta name="viewport" content="width=device-width,initial-scale=1.0">'
         )
         head = f'<head><meta charset="UTF-8">{viewport}{self._styles}{self._scripts}</head>'
-        body = f"<body>{content}</body>"
+        body = f"<body>{content if content else ''}</body>"
 
         return f'<!DOCTYPE html><html lang="en">{head}{body}</html>'
 
-    def display(self, content: str, raw: bool = False):
+    def display(self, content: Union[str, None] = None, raw: bool = False):
         """
         Displays provided HTML string.
 
         Parameters
         ----------
-        content : str
+        content : str or None, default 'None'
             A string containing HTML markup.
         raw: bool, default 'False'
             A boolean that determines if the template should displayed or returned.
@@ -131,9 +131,9 @@ class HTML:
         IPythondisplay(IPythonHTML(template))
 
 
-def display_html(
-    content: str,
-    preset: Union[
+def html(
+    content: Union[str, None] = None,
+    load: Union[
         Literal[
             "alpine",
             "alpine-tailwind",
@@ -146,13 +146,13 @@ def display_html(
 ):
     """
     Displays provided HTML string. Can be used with multiple CSS and JS libraries,
-    by defining a preset or loading them as ESModules.
+    by defining a preset for the `load` parameter or loading them e.g. as ESModules.
 
     Parameters
     ----------
-    content : str
+    content : str or None, default 'None'
         A string containing HTML markup.
-    preset : str or None, default 'None'
+    load : str or None, default 'None'
         A preset name that defines which libraries should be loaded.
     raw: bool, default 'False'
         A boolean that determines if the template should displayed or returned.
@@ -163,6 +163,8 @@ def display_html(
     >>> display_html(content)
     <IPython.core.display.HTML object>
     """
+    preset = load
+
     if preset and preset not in PRESETS:
         preset_names = ", ".join(sorted(list(PRESETS.keys())))
         raise ValueError(
@@ -172,9 +174,9 @@ def display_html(
     css = PRESETS[preset]["css"] if preset and "css" in PRESETS[preset] else None
     js = PRESETS[preset]["js"] if preset and "js" in PRESETS[preset] else None
 
-    html = HTML(css=css, js=js)
+    doc = HTML(css=css, js=js)
 
     if raw:
-        return html.display(content, raw=raw)
+        return doc.display(content, raw=raw)
 
-    html.display(content, raw=raw)
+    doc.display(content, raw=raw)
