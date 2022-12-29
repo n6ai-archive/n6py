@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.18](https://github.com/n6ai/n6py/compare/v0.1.17...v0.1.18) (2022-12-29)
+
+
+### Bug Fixes
+
+* remove crossorigin attribute ([746dde3](https://github.com/n6ai/n6py/commit/746dde355f344c5ebd483811cc295b734a688941))
+
 ## [0.1.17](https://github.com/n6ai/n6py/compare/v0.1.16...v0.1.17) (2022-12-29)
 
 
