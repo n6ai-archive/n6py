@@ -37,7 +37,9 @@ class HTML:
     """
 
     def __init__(
-        self, css: Union[str, list, None] = None, js: Union[str, list, None] = None
+        self,
+        css: Union[str, list[str], None] = None,
+        js: Union[str, list[str], None] = None,
     ):
         """
         Parameters
