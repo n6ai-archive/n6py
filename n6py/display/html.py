@@ -176,9 +176,9 @@ def html(
     css = PRESETS[preset]["css"] if preset and "css" in PRESETS[preset] else None
     js = PRESETS[preset]["js"] if preset and "js" in PRESETS[preset] else None
 
-    doc = HTML(css=css, js=js)
+    doc = HTML(css, js)
 
     if raw:
-        return doc.display(content, raw=raw)
+        return doc.display(content, raw)
 
-    doc.display(content, raw=raw)
+    doc.display(content, raw)
