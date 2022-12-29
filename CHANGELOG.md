@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.17](https://github.com/n6ai/n6py/compare/v0.1.16...v0.1.17) (2022-12-29)
+
+
+### Bug Fixes
+
+* remove Literal type for python 3.7 compat. ([d03a142](https://github.com/n6ai/n6py/commit/d03a142f0b166da43ee6a9f5017dda172aa0dc71))
+
 ## [0.1.16](https://github.com/n6ai/n6py/compare/v0.1.15...v0.1.16) (2022-12-29)
 
 
