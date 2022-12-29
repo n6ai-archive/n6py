@@ -3,7 +3,7 @@
 # pylint: disable=too-few-public-methods
 # pylint: disable=inconsistent-return-statements
 
-from typing import Literal, Union
+from typing import Literal, List, Union
 
 from IPython.display import display as IPythondisplay
 from IPython.core.display import HTML as IPythonHTML
@@ -35,8 +35,8 @@ class HTML:
 
     def __init__(
         self,
-        css: Union[str, list[str], None] = None,
-        js: Union[str, list[str], None] = None,
+        css: Union[str, List[str], None] = None,
+        js: Union[str, List[str], None] = None,
     ):
         """
         Parameters
