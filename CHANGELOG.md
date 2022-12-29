@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.1.16](https://github.com/n6ai/n6py/compare/v0.1.15...v0.1.16) (2022-12-29)
+
+
+### Features
+
+* add display module ([769f690](https://github.com/n6ai/n6py/commit/769f6903329e8b59f72253b34e9068d3c2adeaf1))
+* rename display_html, allow empty content ([b7c584c](https://github.com/n6ai/n6py/commit/b7c584c510fd2fca74bbc28fc9109f83a6bfe9c0))
+
+
+### Bug Fixes
+
+* narrow list type down to str ([8ce375a](https://github.com/n6ai/n6py/commit/8ce375a27d2d6f7be02c6c1263bb378a919aae6b))
+* remove broken vue preset ([249964a](https://github.com/n6ai/n6py/commit/249964a9ec55b2e54b29783742bd1fdbbadef401))
+* use List type for HTML class params ([e25addf](https://github.com/n6ai/n6py/commit/e25addf87e94fc48a3b6488c53a83450485ed7d9))
+
 ## [0.1.15](https://github.com/n6ai/n6py/compare/v0.1.14...v0.1.15) (2022-12-25)
 
 
