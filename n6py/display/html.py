@@ -16,7 +16,6 @@ CDN = {
         "js": "https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js",
     },
     "tailwind": {"js": "https://cdn.tailwindcss.com"},
-    "vue": {"js": "https://unpkg.com/vue@3/dist/vue.global.js"},
 }
 
 # Custom presets
@@ -25,8 +24,6 @@ PRESETS = {
     "alpine-tailwind": {"js": [CDN["alpine"]["js"], CDN["tailwind"]["js"]]},
     "bootstrap": {"css": [CDN["bootstrap"]["css"]], "js": [CDN["bootstrap"]["js"]]},
     "tailwind": {"js": [CDN["tailwind"]["js"]]},
-    "vue": {"js": [CDN["vue"]["js"]]},
-    "vue-tailwind": {"js": [CDN["vue"]["js"], CDN["tailwind"]["js"]]},
 }
 
 
@@ -142,15 +139,14 @@ def display_html(
             "alpine-tailwind",
             "bootstrap",
             "tailwind",
-            "vue",
-            "vue-tailwind",
         ],
         None,
     ] = None,
     raw: bool = False,
 ):
     """
-    Displays provided HTML string.
+    Displays provided HTML string. Can be used with multiple CSS and JS libraries,
+    by defining a preset or loading them as ESModules.
 
     Parameters
     ----------
