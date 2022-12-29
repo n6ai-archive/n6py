@@ -123,7 +123,7 @@ class HTML:
         ----------
         content : str or None, default 'None'
             A string containing HTML markup.
-        raw: bool, default 'False'
+        raw : bool, default 'False'
             A boolean that determines if the template should displayed or returned.
 
         Examples
@@ -156,7 +156,7 @@ def html(
         A string containing HTML markup.
     load : str or None, default 'None'
         A preset name that defines which libraries should be loaded.
-    raw: bool, default 'False'
+    raw : bool, default 'False'
         A boolean that determines if the template should displayed or returned.
 
     Examples
