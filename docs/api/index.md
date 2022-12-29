@@ -26,7 +26,8 @@ n6py                         ➤ package
 
 ## Modules
 
-| API                   | Description                                                           |
-| --------------------- | --------------------------------------------------------------------- |
-| [encode](/api/encode) | A module for encoding data.                                           |
-| [stats](/api/stats)   | A module to display information and statistics about underlying data. |
+| API                     | Description                                                           |
+| ----------------------- | --------------------------------------------------------------------- |
+| [display](/api/display) | A module to display content in Jupyter Notebooks.                     |
+| [encode](/api/encode)   | A module for encoding data.                                           |
+| [stats](/api/stats)     | A module to display information and statistics about underlying data. |
