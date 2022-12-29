@@ -3,7 +3,7 @@
 # pylint: disable=too-few-public-methods
 # pylint: disable=inconsistent-return-statements
 
-from typing import Literal, List, Union
+from typing import List, Union
 
 from IPython.display import display as IPythondisplay
 from IPython.core.display import HTML as IPythonHTML
@@ -133,15 +133,7 @@ class HTML:
 
 def html(
     content: Union[str, None] = None,
-    load: Union[
-        Literal[
-            "alpine",
-            "alpine-tailwind",
-            "bootstrap",
-            "tailwind",
-        ],
-        None,
-    ] = None,
+    load: Union[str, None] = None,
     raw: bool = False,
 ):
     """
