@@ -1,6 +1,6 @@
 """html unit test"""
 
-from n6py.display import html
+from n6py.display import HTML, html
 
 # pylint: disable=line-too-long
 data = [
@@ -18,6 +18,16 @@ data = [
 # pylint: enable=line-too-long
 
 
+def test_HTML():
+    """
+    Template should match the defined result.
+    """
+    content = data[0]["content"]
+    doc = HTML(content)
+
+    assert doc.template == data[0]["result"]
+
+
 def test_html():
     """
     Should return the defined result for each entry in list.
@@ -26,5 +36,5 @@ def test_html():
         load = entry["load"]
         content = entry["content"]
         result = html(content, load, raw=True)
-        print(result)
+
         assert result == entry["result"]
