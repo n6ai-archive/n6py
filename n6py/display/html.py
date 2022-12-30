@@ -19,14 +19,6 @@ CDN = {
     "tailwind": {"js": "https://cdn.tailwindcss.com"},
 }
 
-# Custom presets
-PRESETS = {
-    "alpine": {"js": [CDN["alpine"]["js"]]},
-    "alpine-tailwind": {"js": [CDN["alpine"]["js"], CDN["tailwind"]["js"]]},
-    "bootstrap": {"css": [CDN["bootstrap"]["css"]], "js": [CDN["bootstrap"]["js"]]},
-    "tailwind": {"js": [CDN["tailwind"]["js"]]},
-}
-
 
 class HTML:
     """
@@ -143,19 +135,20 @@ class HTML:
 
 def html(
     content: Union[str, None] = None,
-    load: Union[str, None] = None,
+    load: Union[str, List[str], None] = None,
     raw: bool = False,
 ):
     """
-    Displays provided HTML string. Can be used with multiple CSS and JS libraries,
-    by defining a preset for the `load` parameter or loading them e.g. as ESModules.
+    Displays provided HTML string. Can be used with multiple CSS and JS frameworks/libraries,
+    by passing preset(s) for the `load` parameter, manually loading
+    via `<link>` and `<script>` tags, or loading them as ESModules.
 
     Parameters
     ----------
     content : str or None, default 'None'
         A string containing HTML markup.
-    load : str or None, default 'None'
-        A preset name that defines which libraries should be loaded.
+    load : str, list or None, default 'None'
+        A string or list of string that define which libraries should be loaded.
     raw : bool, default 'False'
         A boolean that determines if the template should displayed or returned.
 
@@ -164,17 +157,28 @@ def html(
     >>> content = "<h1>Hello World!</h1>"
     >>> html(content)
     <IPython.core.display.HTML object>
+
+    >>> content = "<h1>Hello World!</h1>"
+    >>> html(content, ['tailwind', 'alpine'])
+    <IPython.core.display.HTML object>
     """
-    preset = load
+    if load:
+        if not isinstance(load, str) and not isinstance(load, list):
+            raise ValueError(
+                "Provided 'load' parameter is neither a string nor a list of strings."
+            )
 
-    if preset and preset not in PRESETS:
-        preset_names = ", ".join(sorted(list(PRESETS.keys())))
-        raise ValueError(
-            f"Preset with the name '{preset}' does not exist.\nAvailable presets: {preset_names}"
-        )
+        if isinstance(load, str):
+            load = [load]
 
-    css = PRESETS[preset]["css"] if preset and "css" in PRESETS[preset] else None
-    js = PRESETS[preset]["js"] if preset and "js" in PRESETS[preset] else None
+        missing = [x for x in load if x not in CDN]
+
+        if missing:
+            names = sorted(list(CDN.keys()))
+            raise ValueError(f"Can't load {missing}. Possible values: {names}")
+
+    css = [CDN[x]["css"] for x in load if "css" in CDN[x]] if load else None
+    js = [CDN[x]["js"] for x in load if "js" in CDN[x]] if load else None
 
     doc = HTML(css, js)
 

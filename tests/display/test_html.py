@@ -11,13 +11,8 @@ data = [
     },
     {
         "content": "<h1>Hello World!</h1>",
-        "load": "alpine-tailwind",
-        "result": '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><script src="https://unpkg.com/alpinejs@latest/dist/cdn.min.js" defer></script><script src="https://cdn.tailwindcss.com" defer></script></head><body><h1>Hello World!</h1></body></html>',
-    },
-    {
-        "content": "<h1>Hello World!</h1>",
-        "load": "bootstrap",
-        "result": '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><link href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js" defer></script></head><body><h1>Hello World!</h1></body></html>',
+        "load": ["alpine", "tailwind", "bootstrap"],
+        "result": '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><link href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css" rel="stylesheet"><script src="https://unpkg.com/alpinejs@latest/dist/cdn.min.js" defer></script><script src="https://cdn.tailwindcss.com" defer></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js" defer></script></head><body><h1>Hello World!</h1></body></html>',
     },
 ]
 # pylint: enable=line-too-long
@@ -31,5 +26,5 @@ def test_html():
         load = entry["load"]
         content = entry["content"]
         result = html(content, load, raw=True)
-
+        print(result)
         assert result == entry["result"]
