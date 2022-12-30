@@ -74,8 +74,12 @@ poetry add n6py
 !pip install n6py
 ```
 
-```sh [Colab / Kaggle]
-!pip install n6py --ignore-requires-python --no-deps
+```sh [Colab]
+!pip install n6py --no-deps
+```
+
+```sh [Kaggle]
+!pip install n6py --ignore-requires-python --no-deps --root-user-action=ignore
 ```
 
 :::
