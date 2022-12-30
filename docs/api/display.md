@@ -8,22 +8,18 @@ from n6py import display
 
 ## html <Badge type="tip" text="0.1.16" />
 
-Displays provided HTML string. Can be used with multiple CSS and JS libraries, by defining a preset for the `load` parameter or loading them as e.g. ESModules.
+Displays provided HTML string. Can be used with multiple CSS and JS frameworks/libraries, by passing preset(s) for the `load` parameter, manually loading via `<link>` and `<script>` tags, or loading them as ESModules.
 
 - **path:** `n6py.display.html`
 - **args:** `content`, `load`, `raw`
 
 ::: details load presets
 
-**Standalone**
+The load parameter support the following frameworks/libraries out of the box:
 
 - [alpine](https://alpinejs.dev/)
 - [bootstrap](https://getbootstrap.com/)
 - [tailwind](https://tailwindcss.com/)
-
-**Combined**
-
-- alpine-tailwind
 
 :::
 
@@ -32,7 +28,7 @@ Displays provided HTML string. Can be used with multiple CSS and JS libraries, b
 ```py
 (function) html(
   content: str | None = None,
-  load: str | None = None,
+  load: str | List[str] | None = None,
   raw: bool = False
 ) -> (str | None)
 ```
@@ -40,7 +36,7 @@ Displays provided HTML string. Can be used with multiple CSS and JS libraries, b
 :::
 
 ::: warning
-If you intend to display html multiple times with one preset, then it's best to load the preset upfront only once.
+If you intend to display html multiple times with the same `load` parameter, then it's best to load the frameworks/libraries upfront only once.
 :::
 
 ::: code-group
@@ -69,7 +65,7 @@ html(content)
 ```py [Multiple]
 from n6py.display import html
 
-html(laod="tailwind")
+html(laod=["tailwind", "alpine"])
 
 content_1 = """
 <h1 class="text-3xl text-indigo-500 font-bold">
