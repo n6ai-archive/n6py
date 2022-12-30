@@ -60,7 +60,7 @@ class HTML:
 
     @property
     def styles(self):
-        """Creates HTML link tags for stylesheets."""
+        """HTML stylesheets link tags."""
 
         def template(href):
             return f'<link href="{href}" rel="stylesheet">'
@@ -69,7 +69,7 @@ class HTML:
 
     @property
     def scripts(self):
-        """Creates HTML script tags."""
+        """HTML script tags."""
 
         def template(src):
             return f'<script src="{src}" defer></script>'
@@ -78,19 +78,7 @@ class HTML:
 
     @property
     def template(self):
-        """
-        Creates the HTML document string to display.
-
-        Parameters
-        ----------
-        content : str
-            A string containing HTML markup.
-
-        Returns
-        -------
-        str :
-            HTML document string.
-        """
+        """HTML document template."""
         template = f"""
         <!DOCTYPE html>
         <html lang="en">
