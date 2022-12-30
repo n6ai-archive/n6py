@@ -65,8 +65,8 @@ class HTML:
             )
 
         self.content = content
-        self.css = list(css) if isinstance(css, str) else css
-        self.js = list(js) if isinstance(js, str) else js
+        self.css = [css] if isinstance(css, str) else css
+        self.js = [js] if isinstance(js, str) else js
 
     @property
     def styles(self):
@@ -160,7 +160,7 @@ def html(
     if not isinstance(load, (str, list, type(None))):
         raise TypeError("Provided 'load' parameter is neither a string, list or None.")
 
-    load = list(load) if isinstance(load, str) else load
+    load = [load] if isinstance(load, str) else load
     missing = [x for x in load if x not in CDN] if load else None
 
     if missing:
