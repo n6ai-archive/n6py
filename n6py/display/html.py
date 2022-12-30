@@ -1,7 +1,5 @@
 """html module"""
 
-# pylint: disable=too-few-public-methods
-
 from typing import List, Union
 
 import re
@@ -27,55 +25,59 @@ class HTML:
 
     def __init__(
         self,
+        content: Union[str, None] = None,
         css: Union[str, List[str], None] = None,
         js: Union[str, List[str], None] = None,
     ):
         """
         Parameters
         ----------
+        content : str or None, default 'None'
+            A string containing HTML markup.
         css : str, list or None, default 'None'
             A URL or a list of URLs to CSS files.
         js : str, list or None, default 'None'
             A URL or a list of URLs to JavaScript files.
         """
-        self.css = css
-        self.js = js
+        if not isinstance(content, (str, type(None))):
+            raise TypeError(
+                "Provided 'content' parameter is neither a string nor None."
+            )
+
+        if not isinstance(css, (str, list, type(None))):
+            raise TypeError(
+                "Provided 'css' parameter is neither a string, list or None."
+            )
+
+        if not isinstance(js, (str, list, type(None))):
+            raise TypeError(
+                "Provided 'js' parameter is neither a string, list or None."
+            )
+
+        self.content = content
+        self.css = list(css) if isinstance(css, str) else css
+        self.js = list(js) if isinstance(js, str) else js
 
     @property
-    def _styles(self):
+    def styles(self):
         """Creates HTML link tags for stylesheets."""
 
         def template(href):
             return f'<link href="{href}" rel="stylesheet">'
 
-        result = ""
-
-        if isinstance(self.css, list):
-            result = [template(href) for href in self.css]
-            result = "".join(result)
-        elif isinstance(self.css, str):
-            result = template(self.css)
-
-        return result
+        return "".join([template(href) for href in self.css]) if self.css else None
 
     @property
-    def _scripts(self):
+    def scripts(self):
         """Creates HTML script tags."""
 
         def template(src):
             return f'<script src="{src}" defer></script>'
 
-        result = ""
+        return "".join([template(src) for src in self.js]) if self.js else None
 
-        if isinstance(self.js, list):
-            result = [template(src) for src in self.js]
-            result = "".join(result)
-        elif isinstance(self.js, str):
-            result = template(self.js)
-
-        return result
-
-    def _template(self, content):
+    @property
+    def template(self):
         """
         Creates the HTML document string to display.
 
@@ -95,47 +97,38 @@ class HTML:
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-                {self._styles}
-                {self._scripts}
+                {self.styles or ''}
+                {self.scripts or ''}
             </head>
             <body>
-                {content if content else ''}
+                {self.content or ''}
             </body>
         </html>
         """
 
         return re.sub(r"\n\s*", "", "".join(template))
 
-    def display(self, content: Union[str, None] = None, raw: bool = False):
+    def display(self):
         """
         Displays provided HTML string.
 
-        Parameters
-        ----------
-        content : str or None, default 'None'
-            A string containing HTML markup.
-        raw : bool, default 'False'
-            A boolean that determines if the template should displayed or returned.
-
-        Returns
-        -------
-        str, DisplayHandle or None :
-            HTML document string, IPython display or None.
-
         Examples
         --------
-        >>> html = HTML()
-        >>> content = "<h1>Hello World!</h1>"
-        >>> html.display(content)
+        >>> html = HTML("<h1>Hello World!</h1>")
+        >>> html.display()
+        <IPython.core.display.HTML object>
+
+        >>> html = HTML("<h1>Hello World!</h1>", js="https://cdn.tailwindcss.com")
+        >>> html.display()
         <IPython.core.display.HTML object>
         """
-        template = self._template(content)
-
-        return template if raw else IPythondisplay(IPythonHTML(template))
+        IPythondisplay(IPythonHTML(self.template))
 
 
 def html(
-    content: Union[str, None] = None, load: Union[str, List[str], None] = None, **kwargs
+    content: Union[str, None] = None,
+    load: Union[str, List[str], None] = None,
+    raw: bool = False,
 ):
     """
     Displays provided HTML string. Can be used with multiple CSS and JS frameworks/libraries,
@@ -166,24 +159,18 @@ def html(
     >>> html(content, ['tailwind', 'alpine'])
     <IPython.core.display.HTML object>
     """
-    if load:
-        if not isinstance(load, str) and not isinstance(load, list):
-            raise ValueError(
-                "Provided 'load' parameter is neither a string nor a list."
-            )
+    if not isinstance(load, (str, list, type(None))):
+        raise TypeError("Provided 'load' parameter is neither a string, list or None.")
 
-        if isinstance(load, str):
-            load = [load]
+    load = list(load) if isinstance(load, str) else load
+    missing = [x for x in load if x not in CDN] if load else None
 
-        missing = [x for x in load if x not in CDN]
-
-        if missing:
-            names = sorted(list(CDN.keys()))
-            raise ValueError(f"Can't load {missing}. Possible values: {names}")
+    if missing:
+        names = sorted(list(CDN.keys()))
+        raise ValueError(f"Can't load {missing}. Possible values: {names}")
 
     css = [CDN[x]["css"] for x in load if "css" in CDN[x]] if load else None
     js = [CDN[x]["js"] for x in load if "js" in CDN[x]] if load else None
 
-    doc = HTML(css, js)
-
-    return doc.display(content, **kwargs)
+    doc = HTML(content, css, js)
+    return doc.template if raw else doc.display()
