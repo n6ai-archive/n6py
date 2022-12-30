@@ -1,7 +1,6 @@
 """html module"""
 
 # pylint: disable=too-few-public-methods
-# pylint: disable=inconsistent-return-statements
 
 from typing import List, Union
 
@@ -91,8 +90,8 @@ class HTML:
             HTML document string.
         """
         template = f"""
-            <!DOCTYPE html>
-            <html lang="en">
+        <!DOCTYPE html>
+        <html lang="en">
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -102,7 +101,7 @@ class HTML:
             <body>
                 {content if content else ''}
             </body>
-            </html>
+        </html>
         """
 
         return re.sub(r"\n\s*", "", "".join(template))
@@ -118,6 +117,11 @@ class HTML:
         raw : bool, default 'False'
             A boolean that determines if the template should displayed or returned.
 
+        Returns
+        -------
+        str, DisplayHandle or None :
+            HTML document string, IPython display or None.
+
         Examples
         --------
         >>> html = HTML()
@@ -127,16 +131,11 @@ class HTML:
         """
         template = self._template(content)
 
-        if raw:
-            return template
-
-        IPythondisplay(IPythonHTML(template))
+        return template if raw else IPythondisplay(IPythonHTML(template))
 
 
 def html(
-    content: Union[str, None] = None,
-    load: Union[str, List[str], None] = None,
-    raw: bool = False,
+    content: Union[str, None] = None, load: Union[str, List[str], None] = None, **kwargs
 ):
     """
     Displays provided HTML string. Can be used with multiple CSS and JS frameworks/libraries,
@@ -152,6 +151,11 @@ def html(
     raw : bool, default 'False'
         A boolean that determines if the template should displayed or returned.
 
+    Returns
+    -------
+    str, DisplayHandle or None :
+        HTML document string, IPython display or None.
+
     Examples
     --------
     >>> content = "<h1>Hello World!</h1>"
@@ -165,7 +169,7 @@ def html(
     if load:
         if not isinstance(load, str) and not isinstance(load, list):
             raise ValueError(
-                "Provided 'load' parameter is neither a string nor a list of strings."
+                "Provided 'load' parameter is neither a string nor a list."
             )
 
         if isinstance(load, str):
@@ -182,7 +186,4 @@ def html(
 
     doc = HTML(css, js)
 
-    if raw:
-        return doc.display(content, raw)
-
-    doc.display(content, raw)
+    return doc.display(content, **kwargs)
