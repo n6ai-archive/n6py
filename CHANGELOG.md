@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.20](https://github.com/n6ai/n6py/compare/v0.1.19...v0.1.20) (2022-12-30)
+
+
+### Miscellaneous
+
+* manual release ([db5495b](https://github.com/n6ai/n6py/commit/db5495bdf8f96e947065f9442475fc3b6d4b9d97))
+
 ## [0.1.19](https://github.com/n6ai/n6py/compare/v0.1.18...v0.1.19) (2022-12-30)
 
 
