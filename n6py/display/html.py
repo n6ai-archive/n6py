@@ -38,6 +38,16 @@ class HTML:
             A URL or a list of URLs to CSS files.
         js : str, list or None, default 'None'
             A URL or a list of URLs to JavaScript files.
+
+        Examples
+        --------
+        >>> doc = HTML("<h1>Hello World!</h1>")
+        >>> doc.display()
+        <IPython.core.display.HTML object>
+
+        >>> doc = HTML("<h1>Hello World!</h1>", js="https://cdn.tailwindcss.com")
+        >>> doc.display()
+        <IPython.core.display.HTML object>
         """
         if not isinstance(content, (str, type(None))):
             raise TypeError(
@@ -98,16 +108,16 @@ class HTML:
 
     def display(self):
         """
-        Displays provided HTML string.
+        Displays HTML document.
 
         Examples
         --------
-        >>> html = HTML("<h1>Hello World!</h1>")
-        >>> html.display()
+        >>> doc = HTML("<h1>Hello World!</h1>")
+        >>> doc.display()
         <IPython.core.display.HTML object>
 
-        >>> html = HTML("<h1>Hello World!</h1>", js="https://cdn.tailwindcss.com")
-        >>> html.display()
+        >>> doc = HTML("<h1>Hello World!</h1>", js="https://cdn.tailwindcss.com")
+        >>> doc.display()
         <IPython.core.display.HTML object>
         """
         IPythondisplay(IPythonHTML(self.template))
