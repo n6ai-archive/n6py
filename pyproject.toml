@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "n6py"
-version = "0.1.20"
+version = "0.1.21"
 description = "Python Power Tools for Scientific Computing, Machine Learning and Deep Learning."
 authors = ["Sergej Samsonenko <contact@sergej.codes>"]
 license = "MIT"

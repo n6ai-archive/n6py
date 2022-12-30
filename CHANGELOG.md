@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.21](https://github.com/n6ai/n6py/compare/v0.1.20...v0.1.21) (2022-12-30)
+
+
+### Bug Fixes
+
+* replace list constructor ([da5f77f](https://github.com/n6ai/n6py/commit/da5f77ff6d62440576d83e82effa480084c18787))
+
 ## [0.1.20](https://github.com/n6ai/n6py/compare/v0.1.19...v0.1.20) (2022-12-30)
 
 
