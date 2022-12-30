@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.19](https://github.com/n6ai/n6py/compare/v0.1.18...v0.1.19) (2022-12-30)
+
+
+### Features
+
+* remove presets, instead use individual load ([26dc64c](https://github.com/n6ai/n6py/commit/26dc64c65848c0ee07ef700dde085fe6c5743f42))
+
 ## [0.1.18](https://github.com/n6ai/n6py/compare/v0.1.17...v0.1.18) (2022-12-29)
 
 
