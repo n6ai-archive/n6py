@@ -19,8 +19,8 @@ CDN = {
 
 class HTML:
     """
-    HTML class that prepares the HTML document to be displayed,
-    by inserting provided HTML content, and loading any CSS or JS files.
+    HTML class that prepares an HTML document, by inserting
+    provided HTML markup and including any CSS or JS file URLs.
     """
 
     def __init__(
