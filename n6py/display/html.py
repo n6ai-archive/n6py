@@ -1,6 +1,6 @@
 """html module"""
 
-from typing import List, Union
+from typing import Sequence, Union
 
 import re
 from html import escape
@@ -31,18 +31,18 @@ class HTML:
     def __init__(
         self,
         content: Union[str, None] = None,
-        css: Union[str, List[str], None] = None,
-        js: Union[str, List[str], None] = None,
+        css: Union[str, Sequence[str], None] = None,
+        js: Union[str, Sequence[str], None] = None,
     ):
         """
         Parameters
         ----------
         content : str or None, default 'None'
             A string containing HTML markup.
-        css : str, list or None, default 'None'
-            A URL or a list of URLs to CSS files.
-        js : str, list or None, default 'None'
-            A URL or a list of URLs to JavaScript files.
+        css : str, Sequence or None, default 'None'
+            A URL or a sequence of URLs to CSS files.
+        js : str, Sequence or None, default 'None'
+            A URL or a sequence of URLs to JavaScript files.
 
         Examples
         --------
@@ -59,14 +59,14 @@ class HTML:
                 "Provided 'content' parameter is neither a string nor None."
             )
 
-        if not isinstance(css, (str, list, type(None))):
+        if not isinstance(css, (str, Sequence, type(None))):
             raise TypeError(
-                "Provided 'css' parameter is neither a string, list or None."
+                "Provided 'css' parameter is neither a string, Sequence or None."
             )
 
-        if not isinstance(js, (str, list, type(None))):
+        if not isinstance(js, (str, Sequence, type(None))):
             raise TypeError(
-                "Provided 'js' parameter is neither a string, list or None."
+                "Provided 'js' parameter is neither a string, Sequence or None."
             )
 
         self.content = content
@@ -175,7 +175,7 @@ class HTML:
 
 def html(
     content: Union[str, None] = None,
-    load: Union[str, List[str], None] = None,
+    load: Union[str, Sequence[str], None] = None,
     raw: bool = False,
 ):
     """
@@ -187,8 +187,8 @@ def html(
     ----------
     content : str or None, default 'None'
         A string containing HTML markup.
-    load : str, list or None, default 'None'
-        A string or list of string that define which libraries should be loaded.
+    load : str, Sequence or None, default 'None'
+        A string or Sequence of strings that define which libraries should be loaded.
     raw : bool, default 'False'
         A boolean that determines if the template should displayed or returned.
 
@@ -207,8 +207,10 @@ def html(
     >>> html(content, ['tailwind', 'alpine'])
     <IPython.core.display.HTML object>
     """
-    if not isinstance(load, (str, list, type(None))):
-        raise TypeError("Provided 'load' parameter is neither a string, list or None.")
+    if not isinstance(load, (str, Sequence, type(None))):
+        raise TypeError(
+            "Provided 'load' parameter is neither a string, Sequence or None."
+        )
 
     load = [load] if isinstance(load, str) else load
     missing = [x for x in load if x not in CDN] if load else None
