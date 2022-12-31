@@ -106,7 +106,7 @@ The load parameter supports the following frameworks/libraries out of the box:
 :::
 
 ::: warning
-The `html` function always loads the latest version of the available presets via a CDN. In production it's better to pin the CSS and JavaScript files to a specific version like demonstrated in the HTML class code examples.
+The `html` function always loads the latest version of the available presets via a CDN. In production, it's better to pin the CSS and JavaScript files to a specific version as demonstrated in the HTML class code examples.
 :::
 
 ::: code-group
