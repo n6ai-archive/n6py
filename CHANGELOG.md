@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.24](https://github.com/n6ai/n6py/compare/v0.1.23...v0.1.24) (2022-12-31)
+
+
+### Bug Fixes
+
+* make content param mandatory for html module ([79dd0b6](https://github.com/n6ai/n6py/commit/79dd0b60dc34d188dd5ac85050c4d1d83201c446))
+* remove padding from notebooks parent element ([41944f3](https://github.com/n6ai/n6py/commit/41944f3acb3e575fe6a987c13464be67f78b7c15))
+
 ## [0.1.23](https://github.com/n6ai/n6py/compare/v0.1.22...v0.1.23) (2022-12-31)
 
 
