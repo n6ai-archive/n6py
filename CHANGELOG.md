@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.25](https://github.com/n6ai/n6py/compare/v0.1.24...v0.1.25) (2022-12-31)
+
+
+### Bug Fixes
+
+* set html iframe background to transparent ([a756a20](https://github.com/n6ai/n6py/commit/a756a2051ebe78c0a9f122a285ddcde9d1425cff))
+
 ## [0.1.24](https://github.com/n6ai/n6py/compare/v0.1.23...v0.1.24) (2022-12-31)
 
 
