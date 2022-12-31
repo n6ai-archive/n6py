@@ -20,8 +20,8 @@ HTML class that prepares an HTML document, by inserting provided HTML markup and
 ```py
 (class) HTML(
   content: str | None = None,
-  css: str | List[str] | None = None,
-  js: str | List[str] | None = None
+  css: str | Sequence[str] | None = None,
+  js: str | Sequence[str] | None = None
 )
 ```
 
@@ -77,7 +77,7 @@ The load parameter supports the following frameworks/libraries out of the box:
 ```py
 (function) html(
   content: str | None = None,
-  load: str | List[str] | None = None,
+  load: str | Sequence[str] | None = None,
   raw: bool = False
 ) -> (str | None)
 ```
