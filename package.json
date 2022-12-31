@@ -1,6 +1,7 @@
 {
   "name": "n6py",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "nodemon playground/main.py -w n6py -w playground -e py -q",
     "docs": "vitepress dev docs",
@@ -10,6 +11,7 @@
     "postinstall": "simple-git-hooks"
   },
   "devDependencies": {
+    "@types/node": "^18.11.18",
     "lint-staged": "^13.1.0",
     "nodemon": "^2.0.20",
     "prettier": "^2.8.1",

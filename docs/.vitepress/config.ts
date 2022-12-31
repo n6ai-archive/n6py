@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
-import { sidebar } from './sidebar'
-import { META_TITLE, META_DESCRIPTION, head } from './head'
+import { META_TITLE, META_DESCRIPTION, head } from './configs/head'
+import { nav } from './configs/nav'
+import { sidebar } from './configs/sidebar'
 
 export default defineConfig({
   lang: 'en-US',
@@ -24,11 +25,7 @@ export default defineConfig({
       copyright: 'Copyright © 2022-present Sergej Samsonenko'
     },
 
-    nav: [
-      { text: 'Guide', link: '/guide/' },
-      { text: 'API', link: '/api/' }
-    ],
-
+    nav,
     sidebar
   }
 })
