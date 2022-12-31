@@ -1,6 +1,7 @@
 """html module"""
 
 from typing import Sequence, Union
+from pathlib import Path
 
 import re
 from html import escape
@@ -161,6 +162,29 @@ class HTML:
         <IPython.core.display.HTML object>
         """
         IPythondisplay(IPythonHTML(self.__iframe))
+
+    def save(self, name: Union[str, Path]):
+        """
+        Saves the HTML template to an `.html` file with the provided name or path.
+
+        Parameters
+        ----------
+        name : str
+            Name or path of the file that will be written to disk.
+
+        Examples
+        --------
+        >>> doc = HTML("<h1>Hello World!</h1>")
+        >>> doc.save("file.html")
+        """
+        if not isinstance(name, (str, Path)):
+            raise TypeError("Provided 'name' parameter is neither string or Path.")
+
+        if isinstance(name, str):
+            name = name if re.search(r"\.html$", name) else f"{name}.html"
+
+        with open(name, "w", encoding="utf-8") as f:
+            f.write(self.template)
 
 
 def html(

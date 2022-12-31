@@ -1,5 +1,8 @@
 """html unit test"""
 
+from pathlib import Path
+from tempfile import TemporaryDirectory
+
 from n6py.display import HTML, html
 
 # pylint: disable=line-too-long
@@ -23,7 +26,7 @@ data = [
 # pylint: enable=line-too-long
 
 
-def test_html_class():
+def test_html_class_display():
     """
     Template should match the defined result.
     """
@@ -31,6 +34,23 @@ def test_html_class():
     doc = HTML(content)
 
     assert doc.template == data[0]["result"]
+
+
+def test_html_class_save():
+    """
+    Should save a file to disk and the contents
+    of that file should match the defined result.
+    """
+    content = data[0]["content"]
+    doc = HTML(content)
+
+    with TemporaryDirectory() as tmpdir:
+        file = Path(tmpdir).joinpath("file.html")
+        doc.save(file)
+
+        with open(file, "r", encoding="utf-8") as f:
+            content = f.read()
+            assert content == data[0]["result"]
 
 
 def test_html():

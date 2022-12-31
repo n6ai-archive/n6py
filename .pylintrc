@@ -1,5 +1,5 @@
 [BASIC]
-good-names=i,j,k,ex,T,Run,_,js
+good-names=i,j,k,f,ex,T,Run,_,js
 
 [SIMILARITIES]
 min-similarity-lines=0
