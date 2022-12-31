@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.22](https://github.com/n6ai/n6py/compare/v0.1.21...v0.1.22) (2022-12-31)
+
+
+### Features
+
+* add additional css and js framework presets ([f8e7580](https://github.com/n6ai/n6py/commit/f8e7580bd377ce13bdad717b61f630190cd7233a))
+* use iframe for html rendering ([f2320b5](https://github.com/n6ai/n6py/commit/f2320b5384e359da174c2768b4e0ddd67889d6a6))
+
 ## [0.1.21](https://github.com/n6ai/n6py/compare/v0.1.20...v0.1.21) (2022-12-30)
 
 
