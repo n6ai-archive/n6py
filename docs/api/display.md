@@ -13,7 +13,7 @@ HTML class that prepares an HTML document, by inserting provided HTML markup and
 - **path:** `n6py.display.HTML`
 - **args:** `content`, `css`, `js`
 - **properties:** `.template`
-- **methods:** `display()`
+- **methods:** `.display()`, `.save()`
 
 ::: details type
 
@@ -59,6 +59,17 @@ content = """
 """
 
 html(content)
+```
+
+```py [Save]
+from n6py.display import HTML
+
+content = """
+<h1>Hello World!</h1>
+"""
+
+doc = HTML(content)
+doc.save("file.html")
 ```
 
 ```py [Result]
