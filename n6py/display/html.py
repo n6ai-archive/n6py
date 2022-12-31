@@ -3,6 +3,7 @@
 from typing import List, Union
 
 import re
+from html import escape
 from IPython.display import display as IPythondisplay
 from IPython.core.display import HTML as IPythonHTML
 
@@ -69,7 +70,7 @@ class HTML:
         self.js = [js] if isinstance(js, str) else js
 
     @property
-    def styles(self):
+    def __styles(self):
         """HTML stylesheets link tags."""
 
         def template(href):
@@ -78,11 +79,11 @@ class HTML:
         return "".join([template(href) for href in self.css]) if self.css else None
 
     @property
-    def scripts(self):
+    def __scripts(self):
         """HTML script tags."""
 
         def template(src):
-            return f'<script src="{src}" defer></script>'
+            return f'<script src="{src}"></script>'
 
         return "".join([template(src) for src in self.js]) if self.js else None
 
@@ -91,12 +92,13 @@ class HTML:
         """HTML document template."""
         template = f"""
         <!DOCTYPE html>
-        <html lang="en">
+        <html>
             <head>
                 <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width,initial-scale=1.0">
-                {self.styles or ''}
-                {self.scripts or ''}
+                <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+                {self.__styles or ''}
+                {self.__scripts or ''}
+                <style>html, body {{overflow: hidden; padding: 0; margin: 0;}}</style>
             </head>
             <body>
                 {self.content or ''}
@@ -104,7 +106,51 @@ class HTML:
         </html>
         """
 
-        return re.sub(r"\n\s*", "", "".join(template))
+        return self.__minify(template)
+
+    @property
+    def __iframe(self):
+        """HTML iframe template."""
+        template = f"""
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+            </head>
+            <body>
+                <iframe
+                    srcdoc="{escape(self.template)}"
+                    width="100%"
+                    height="0"
+                    fetchpriority="high"
+                    loading="eager"
+                    style="border: none;"
+                    onload="new ResizeObserver(() => {{
+                        this.style.height = `${{this.contentDocument.body.scrollHeight}}px`
+                    }}).observe(this.contentDocument.body)"
+                ></iframe>
+            </body>
+        </html>
+        """
+
+        return self.__minify(template)
+
+    def __minify(self, template: str):
+        """
+        Minifies a given HTML template string.
+
+        Parameters
+        ----------
+        template : str
+            A string containing HTML markup.
+
+        Returns
+        -------
+        str :
+            A string containing minified HTML markup.
+        """
+        return re.sub(r"<!--(.*?)-->|(?=>)\s+|\s+(?=<)|\s+$", "", "".join(template))
 
     def display(self):
         """
@@ -120,7 +166,7 @@ class HTML:
         >>> doc.display()
         <IPython.core.display.HTML object>
         """
-        IPythondisplay(IPythonHTML(self.template))
+        IPythondisplay(IPythonHTML(self.__iframe))
 
 
 def html(

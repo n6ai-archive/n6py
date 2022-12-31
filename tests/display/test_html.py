@@ -7,18 +7,23 @@ data = [
     {
         "content": "<h1>Hello World!</h1>",
         "load": None,
-        "result": '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"></head><body><h1>Hello World!</h1></body></html>',
+        "result": '<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no"><style>html, body {overflow: hidden; padding: 0; margin: 0;}</style></head><body><h1>Hello World!</h1></body></html>',
+    },
+    {
+        "content": "<h1>Hello World!</h1>",
+        "load": "tailwind",
+        "result": '<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no"><script src="https://cdn.tailwindcss.com"></script><style>html, body {overflow: hidden; padding: 0; margin: 0;}</style></head><body><h1>Hello World!</h1></body></html>',
     },
     {
         "content": "<h1>Hello World!</h1>",
         "load": ["alpine", "tailwind", "bootstrap"],
-        "result": '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><link href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css" rel="stylesheet"><script src="https://unpkg.com/alpinejs@latest/dist/cdn.min.js" defer></script><script src="https://cdn.tailwindcss.com" defer></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js" defer></script></head><body><h1>Hello World!</h1></body></html>',
+        "result": '<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no"><link href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css" rel="stylesheet"><script src="https://unpkg.com/alpinejs@latest/dist/cdn.min.js"></script><script src="https://cdn.tailwindcss.com"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js"></script><style>html, body {overflow: hidden; padding: 0; margin: 0;}</style></head><body><h1>Hello World!</h1></body></html>',
     },
 ]
 # pylint: enable=line-too-long
 
 
-def test_HTML():
+def test_html_class():
     """
     Template should match the defined result.
     """
