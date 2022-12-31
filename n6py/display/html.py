@@ -114,26 +114,18 @@ class HTML:
     def __iframe(self):
         """HTML iframe template."""
         template = f"""
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
-            </head>
-            <body>
-                <iframe
-                    srcdoc="{escape(self.template)}"
-                    width="100%"
-                    height="0"
-                    fetchpriority="high"
-                    loading="eager"
-                    style="border: none;"
-                    onload="new ResizeObserver(() => {{
-                        this.style.height = `${{this.contentDocument.body.scrollHeight}}px`
-                    }}).observe(this.contentDocument.body)"
-                ></iframe>
-            </body>
-        </html>
+            <style>[data-mime-type="text/html"] {{padding-right: 0;}}</style>
+            <iframe
+                srcdoc="{escape(self.template)}"
+                width="100%"
+                height="0"
+                fetchpriority="high"
+                loading="eager"
+                style="border: none;"
+                onload="new ResizeObserver(() => {{
+                    this.style.height = `${{this.contentDocument.body.scrollHeight}}px`
+                }}).observe(this.contentDocument.body)"
+            ></iframe>
         """
 
         return self.__minify(template)
