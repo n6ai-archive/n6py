@@ -9,6 +9,10 @@ export const nav = [
     text: version,
     items: [
       {
+        text: 'PyPI Package',
+        link: 'https://pypi.org/project/n6py/'
+      },
+      {
         text: 'Changelog',
         link: 'https://github.com/n6ai/n6py/blob/main/CHANGELOG.md'
       },
