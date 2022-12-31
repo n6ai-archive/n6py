@@ -53,7 +53,7 @@ python --version
 To get started you have to install `n6py` with your preferred package manager.
 
 ::: warning
-Some cloud notebook environments like Kaggle don't run the latest Python version required for some libraries like NumPy and Pandas that are bundled with `n6py`. Those environments have their own versions pre-installed. You have to pass the `--ignore-requires-python --no-deps` flags to ignore the minimum required Python version and to prevent `n6py` from updating those libraries.
+Some cloud notebook environments like Kaggle don't run the latest Python version required for some libraries like NumPy and Pandas that are bundled with `n6py`. Those environments have their own versions pre-installed. You have to pass the `--no-deps --ignore-requires-python` flags to ignore the minimum required Python version and to prevent `n6py` from updating those libraries.
 :::
 
 ::: code-group
@@ -79,7 +79,7 @@ poetry add n6py
 ```
 
 ```sh [Kaggle]
-!pip install n6py --ignore-requires-python --no-deps --root-user-action=ignore
+!pip install n6py --no-deps --ignore-requires-python --root-user-action=ignore
 ```
 
 :::
