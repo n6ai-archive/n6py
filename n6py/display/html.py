@@ -30,14 +30,14 @@ class HTML:
 
     def __init__(
         self,
-        content: Union[str, None] = None,
+        content: str,
         css: Union[str, Sequence[str], None] = None,
         js: Union[str, Sequence[str], None] = None,
     ):
         """
         Parameters
         ----------
-        content : str or None, default 'None'
+        content : str
             A string containing HTML markup.
         css : str, Sequence or None, default 'None'
             A URL or a sequence of URLs to CSS files.
@@ -54,10 +54,8 @@ class HTML:
         >>> doc.display()
         <IPython.core.display.HTML object>
         """
-        if not isinstance(content, (str, type(None))):
-            raise TypeError(
-                "Provided 'content' parameter is neither a string nor None."
-            )
+        if not isinstance(content, str):
+            raise TypeError("Provided 'content' parameter is not a string.")
 
         if not isinstance(css, (str, Sequence, type(None))):
             raise TypeError(
@@ -174,7 +172,7 @@ class HTML:
 
 
 def html(
-    content: Union[str, None] = None,
+    content: str,
     load: Union[str, Sequence[str], None] = None,
     raw: bool = False,
 ):
@@ -185,7 +183,7 @@ def html(
 
     Parameters
     ----------
-    content : str or None, default 'None'
+    content : str
         A string containing HTML markup.
     load : str, Sequence or None, default 'None'
         A string or Sequence of strings that define which libraries should be loaded.
