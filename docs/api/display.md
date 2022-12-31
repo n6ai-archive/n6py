@@ -36,8 +36,29 @@ content = """
 <h1>Hello World!</h1>
 """
 
-doc = HTML(content, js="https://cdn.tailwindcss.com")
+doc = HTML(content, js="https://cdn.tailwindcss.com/3.2.4")
 doc.display()
+```
+
+```py [Custom]
+from n6py.display import HTML
+
+def html(content):
+  url = {
+    "css": ["https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"],
+    "js": ["https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"]
+  }
+
+  doc = HTML(content, url["css"], url["js"])
+  doc.display()
+
+content = """
+<div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div>
+"""
+
+html(content)
 ```
 
 ```py [Result]
@@ -48,7 +69,7 @@ doc.display()
 
 ## html <Badge type="tip" text="0.1.16" />
 
-Displays provided HTML string. Can be used with multiple CSS and JS frameworks/libraries, by passing preset(s) for the `load` parameter, manually loading via `<link>` and `<script>` tags, or loading them as ESModules.
+Displays provided HTML string. Can be used with multiple CSS and JavaScript frameworks/libraries, by passing preset(s) for the `load` parameter, manually loading via `<link>` and `<script>` tags, or loading them as ESModules.
 
 - **path:** `n6py.display.html`
 - **args:** `content`, `load`, `raw`
@@ -84,6 +105,10 @@ The load parameter supports the following frameworks/libraries out of the box:
 
 :::
 
+::: warning
+The `html` function always loads the latest version of the available presets via a CDN. In production it's better to pin the CSS and JavaScript files to a specific version like demonstrated in the HTML class code examples.
+:::
+
 ::: code-group
 
 ```py [HTML]
@@ -92,7 +117,7 @@ from n6py.display import html
 html("<h1>Hello World!</h1>")
 ```
 
-```py [Custom]
+```py [Presets]
 from n6py.display import html
 
 content = """
