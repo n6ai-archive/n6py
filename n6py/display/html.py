@@ -14,7 +14,11 @@ CDN = {
         "css": "https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css",
         "js": "https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js",
     },
+    "bulma": {"css": "https://cdn.jsdelivr.net/npm/bulma@latest/css/bulma.min.css"},
+    "minze": {"js": "https://unpkg.com/minze@latest"},
+    "normalize": {"css": "https://unpkg.com/normalize.css@latest"},
     "tailwind": {"js": "https://cdn.tailwindcss.com"},
+    "vue": {"js": "https://unpkg.com/vue@latest/dist/vue.global.js"},
 }
 
 
