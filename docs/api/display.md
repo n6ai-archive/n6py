@@ -55,11 +55,20 @@ Displays provided HTML string. Can be used with multiple CSS and JS frameworks/l
 
 ::: details load presets
 
-The load parameter support the following frameworks/libraries out of the box:
+The load parameter supports the following frameworks/libraries out of the box:
+
+**CSS**
+
+- [bootstrap](https://getbootstrap.com/)
+- [bulma](https://bulma.io/)
+- [normalize](https://necolas.github.io/normalize.css/)
+- [tailwind](https://tailwindcss.com/)
+
+**JavaScript**
 
 - [alpine](https://alpinejs.dev/)
-- [bootstrap](https://getbootstrap.com/)
-- [tailwind](https://tailwindcss.com/)
+- [minze](https://minze.dev/)
+- [vue](https://vuejs.org/)
 
 :::
 
@@ -75,89 +84,17 @@ The load parameter support the following frameworks/libraries out of the box:
 
 :::
 
-::: warning
-If you intend to display html multiple times with the same `load` parameter, then it's best to load the frameworks/libraries upfront only once.
-:::
-
 ::: code-group
 
 ```py [HTML]
 from n6py.display import html
 
-content = """
-<h1>Hello World!</h1>
-"""
-
-html(content)
+html("<h1>Hello World!</h1>")
 ```
 
 ```py [Custom]
 from n6py.display import html
 
-content = """
-<h1>Hello World!</h1>
-<script src="https://cdn.tailwindcss.com"></script>
-"""
-
-html(content)
-```
-
-```py [Multiple]
-from n6py.display import html
-
-html(laod=["tailwind", "alpine"])
-
-content_1 = """
-<h1 class="text-3xl text-indigo-500 font-bold">
-  Hello World!
-</h1>
-"""
-
-html(content_1)
-
-content_2 = """
-<h1 class="text-3xl text-indigo-500 font-bold">
-  Hello World!
-</h1>
-"""
-
-html(content_2)
-```
-
-```py [Alpine.js]
-from n6py.display import html
-
-# https://alpinejs.dev/
-content = """
-<div x-data="{ open: false }">
-  <button @click="open = !open">Expand</button>
-
-  <div x-show="open">
-    Content...
-  </div>
-</div>
-"""
-
-html(content, "alpine")
-```
-
-```py [Bootstrap]
-from n6py.display import html
-
-# https://getbootstrap.com/
-content = """
-<div class="alert alert-primary" role="alert">
-  A simple primary alert—check it out!
-</div>
-"""
-
-html(content, "bootstrap")
-```
-
-```py [Tailwind CSS]
-from n6py.display import html
-
-# https://tailwindcss.com/
 content = """
 <h1 class="text-3xl text-indigo-500 font-bold">
   Hello World!
@@ -165,29 +102,6 @@ content = """
 """
 
 html(content, "tailwind")
-```
-
-```py [Vue.js]
-from n6py.display import html
-
-# https://vuejs.org/
-content = """
-<div id="app">{{ message }}</div>
-
-<script type="module">
-  import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
-
-  createApp({
-    data() {
-      return {
-        message: 'Hello Vue!'
-      }
-    }
-  }).mount('#app')
-</script>
-"""
-
-html(content)
 ```
 
 ```py [Result]
