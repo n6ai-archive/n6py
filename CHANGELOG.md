@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.23](https://github.com/n6ai/n6py/compare/v0.1.22...v0.1.23) (2022-12-31)
+
+
+### Features
+
+* allow Sequence type for html module params ([23d7941](https://github.com/n6ai/n6py/commit/23d794138e0ca7adfc8a541e771265eb29e1f18e))
+
 ## [0.1.22](https://github.com/n6ai/n6py/compare/v0.1.21...v0.1.22) (2022-12-31)
 
 
