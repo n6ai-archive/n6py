@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.26](https://github.com/n6ai/n6py/compare/v0.1.25...v0.1.26) (2022-12-31)
+
+
+### Features
+
+* add save method to HTML class ([9145077](https://github.com/n6ai/n6py/commit/91450774d27ab1a85c00aa2b6c3fce79c50128b4))
+
 ## [0.1.25](https://github.com/n6ai/n6py/compare/v0.1.24...v0.1.25) (2022-12-31)
 
 
