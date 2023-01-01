@@ -153,7 +153,9 @@ class HTML:
         str :
             A string containing minified HTML markup.
         """
-        return re.sub(r"<!--(.*?)-->|(?=>)\s+|\s+(?=<)|\s+$", "", "".join(template))
+        return re.sub(
+            r"<!--(.*?)-->|(?=>)\s+|(?<!\w)\s+(?=<)|\s+$", "", "".join(template)
+        )
 
     def display(self):
         """
