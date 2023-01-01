@@ -109,7 +109,7 @@ class HTML:
                 <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
                 {self.__styles or ''}
                 {self.__scripts or ''}
-                <style>html, body {{background: transparent; overflow: hidden; padding: 0; margin: 0;}}</style>
+                <style>html, body {{background: transparent !important; overflow: hidden; padding: 0; margin: 0;}}</style>
             </head>
             <body>
                 {self.content or ''}
