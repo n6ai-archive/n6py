@@ -9,17 +9,25 @@ from IPython.display import display as IPythondisplay
 from IPython.core.display import HTML as IPythonHTML
 
 # Latest CDN version links
+PROVIDER = "https://unpkg.com/"
+
 CDN = {
-    "alpine": {"js": "https://unpkg.com/alpinejs@latest/dist/cdn.min.js"},
+    "alpine": {"js": f"{PROVIDER}alpinejs@latest/cdn.min.js"},
+    "animate": {"css": f"{PROVIDER}animate.css@latest/animate.min.css"},
+    "animejs": {"js": f"{PROVIDER}animejs.css@latest/anime.min.js"},
     "bootstrap": {
-        "css": "https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css",
-        "js": "https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js",
+        "css": f"{PROVIDER}bootstrap@latest/dist/css/bootstrap.min.css",
+        "js": f"{PROVIDER}bootstrap@latest/dist/js/bootstrap.bundle.min.js",
     },
-    "bulma": {"css": "https://cdn.jsdelivr.net/npm/bulma@latest/css/bulma.min.css"},
-    "minze": {"js": "https://unpkg.com/minze@latest"},
-    "normalize": {"css": "https://unpkg.com/normalize.css@latest"},
-    "tailwind": {"js": "https://cdn.tailwindcss.com"},
-    "vue": {"js": "https://unpkg.com/vue@latest/dist/vue.global.js"},
+    "bulma": {"css": f"{PROVIDER}bulma@latest/css/bulma.min.css"},
+    "halfmoon": {
+        "css": f"{PROVIDER}halfmoon@latest/css/halfmoon-variables.min.css",
+        "js": f"{PROVIDER}halfmoon@latest/js/halfmoon.min.js",
+    },
+    "minze": {"js": f"{PROVIDER}minze@latest"},
+    "normalize": {"css": f"{PROVIDER}normalize.css@latest"},
+    "tailwind": {"js": f"https://cdn.tailwindcss.com"},
+    "vue": {"js": f"{PROVIDER}vue@latest/dist/vue.global.js"},
 }
 
 

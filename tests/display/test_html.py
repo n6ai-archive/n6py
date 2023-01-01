@@ -6,21 +6,27 @@ from tempfile import TemporaryDirectory
 from n6py.display import HTML, html
 
 # pylint: disable=line-too-long
+def template(content: str = ""):
+    return f'<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">{content}<style>html, body {{background: transparent; overflow: hidden; padding: 0; margin: 0;}}</style></head><body><h1>Hello World!</h1></body></html>'
+
+
 data = [
     {
         "content": "<h1>Hello World!</h1>",
         "load": None,
-        "result": '<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no"><style>html, body {background: transparent; overflow: hidden; padding: 0; margin: 0;}</style></head><body><h1>Hello World!</h1></body></html>',
+        "result": template(),
     },
     {
         "content": "<h1>Hello World!</h1>",
         "load": "tailwind",
-        "result": '<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no"><script src="https://cdn.tailwindcss.com"></script><style>html, body {background: transparent; overflow: hidden; padding: 0; margin: 0;}</style></head><body><h1>Hello World!</h1></body></html>',
+        "result": template('<script src="https://cdn.tailwindcss.com"></script>'),
     },
     {
         "content": "<h1>Hello World!</h1>",
-        "load": ["alpine", "tailwind", "bootstrap"],
-        "result": '<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no"><link href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css" rel="stylesheet"><script src="https://unpkg.com/alpinejs@latest/dist/cdn.min.js"></script><script src="https://cdn.tailwindcss.com"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js"></script><style>html, body {background: transparent; overflow: hidden; padding: 0; margin: 0;}</style></head><body><h1>Hello World!</h1></body></html>',
+        "load": ["bootstrap", "tailwind"],
+        "result": template(
+            '<link href="https://unpkg.com/bootstrap@latest/dist/css/bootstrap.min.css" rel="stylesheet"><script src="https://unpkg.com/bootstrap@latest/dist/js/bootstrap.bundle.min.js"></script><script src="https://cdn.tailwindcss.com"></script>'
+        ),
     },
 ]
 # pylint: enable=line-too-long
