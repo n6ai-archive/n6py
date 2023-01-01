@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.1.27](https://github.com/n6ai/n6py/compare/v0.1.26...v0.1.27) (2023-01-01)
+
+
+### Features
+
+* add more js, css libs and unify cdn provider ([3375468](https://github.com/n6ai/n6py/commit/33754689ee86a8c579afb1b269656f6b61736828))
+
+
+### Bug Fixes
+
+* regex for html minification keeps more spaces ([95b0adc](https://github.com/n6ai/n6py/commit/95b0adc587bd14f72e7dd3b70cd04113a002a9ce))
+* use !important on html and body iframe bg ([ac59334](https://github.com/n6ai/n6py/commit/ac593341f5638d7274942d09c25fac18979cb2aa))
+
 ## [0.1.26](https://github.com/n6ai/n6py/compare/v0.1.25...v0.1.26) (2022-12-31)
 
 
