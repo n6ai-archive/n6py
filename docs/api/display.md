@@ -45,8 +45,8 @@ from n6py.display import HTML
 
 def html(content):
   url = {
-    "css": ["https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"],
-    "js": ["https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"]
+    "css": ["https://unpkg.com/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"],
+    "js": ["https://unpkg.com/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"]
   }
 
   doc = HTML(content, url["css"], url["js"])
@@ -89,18 +89,18 @@ Displays provided HTML string. Can be used with multiple CSS and JavaScript fram
 
 The load parameter supports the following frameworks/libraries out of the box:
 
-**CSS**
-
-- [bootstrap](https://getbootstrap.com/)
-- [bulma](https://bulma.io/)
-- [normalize](https://necolas.github.io/normalize.css/)
-- [tailwind](https://tailwindcss.com/)
-
-**JavaScript**
-
-- [alpine](https://alpinejs.dev/)
-- [minze](https://minze.dev/)
-- [vue](https://vuejs.org/)
+| Preset                                                | Language | Function           |
+| :---------------------------------------------------- | :------- | :----------------- |
+| [alpine](https://alpinejs.dev/)                       | JS       | layout             |
+| [animate](https://animate.style/)                     | CSS      | animation          |
+| [animejs](https://animejs.com/)                       | JS       | animation          |
+| [bootstrap](https://getbootstrap.com/)                | CSS      | layout, components |
+| [bulma](https://bulma.io/)                            | CSS      | layout             |
+| [halfmoon](https://www.gethalfmoon.com/)              | CSS      | layout, components |
+| [minze](https://minze.dev/)                           | JS       | web components     |
+| [normalize](https://necolas.github.io/normalize.css/) | CSS      | layout, reset      |
+| [tailwind](https://tailwindcss.com/)                  | CSS      | layout, utilies    |
+| [vue](https://vuejs.org/)                             | JS       | layout, components |
 
 :::
 
@@ -122,7 +122,7 @@ The `html` function always loads the latest version of the available presets via
 
 ::: code-group
 
-```py [HTML]
+```py [Code]
 from n6py.display import html
 
 html("<h1>Hello World!</h1>")
