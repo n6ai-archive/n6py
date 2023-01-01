@@ -7,6 +7,7 @@ from n6py.display import HTML, html
 
 # pylint: disable=line-too-long
 def template(content: str = ""):
+    """Builds template for testing comparison"""
     return f'<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">{content}<style>html, body {{background: transparent !important; overflow: hidden; padding: 0; margin: 0;}}</style></head><body><h1>Hello World!</h1></body></html>'
 
 
