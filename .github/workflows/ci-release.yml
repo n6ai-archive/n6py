@@ -26,8 +26,6 @@ jobs:
       - name: Create commit
         if: ${{ github.event.inputs.version }}
         uses: ./.github/actions/ci-release-commit
-        with:
-          release-version: ${{ github.event.inputs.version }}
 
   release-please:
     runs-on: ubuntu-latest
