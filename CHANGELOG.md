@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.29](https://github.com/n6ai/n6py/compare/v0.1.28...v0.1.29) (2023-01-14)
+
+
+### Features
+
+* add box module to display stylized strings ([dbeb505](https://github.com/n6ai/n6py/commit/dbeb505699fd47c9ddfe4c6a3efd00ec69a7d9e6))
+
 ## [0.1.28](https://github.com/n6ai/n6py/compare/v0.1.27...v0.1.28) (2023-01-14)
 
 
