@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.28](https://github.com/n6ai/n6py/compare/v0.1.27...v0.1.28) (2023-01-14)
+
+
+### Features
+
+* add unocss preset ([cbad354](https://github.com/n6ai/n6py/commit/cbad35486090636bfaa79669186f27eacc95338d))
+
 ## [0.1.27](https://github.com/n6ai/n6py/compare/v0.1.26...v0.1.27) (2023-01-01)
 
 
