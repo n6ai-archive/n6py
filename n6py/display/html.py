@@ -27,6 +27,10 @@ CDN = {
     "minze": {"js": f"{PROVIDER}minze@latest"},
     "normalize": {"css": f"{PROVIDER}normalize.css@latest"},
     "tailwind": {"js": "https://cdn.tailwindcss.com"},
+    "unocss": {
+        "css": f"{PROVIDER}@unocss/reset@latest/tailwind.css",
+        "js": f"{PROVIDER}@unocss/runtime@latest/mini.global.js",
+    },
     "vue": {"js": f"{PROVIDER}vue@latest/dist/vue.global.js"},
 }
 
