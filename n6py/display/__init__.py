@@ -1,3 +1,3 @@
 """stats module"""
-from .html import HTML
-from .html import html
+from .html import HTML, html
+from .box import Box, box
