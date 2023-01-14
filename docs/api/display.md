@@ -6,6 +6,76 @@ A module to display content in Jupyter Notebooks.
 from n6py import display
 ```
 
+## Box <Badge type="tip" text="0.1.29" />
+
+A class that builds a string representation of a box around the provided content.
+
+- **path:** `n6py.display.Box`
+- **args:** `content`, `lines`
+
+::: details type
+
+```py
+(class) Box(
+  content: str,
+  lines: Iterable[str]
+)
+```
+
+:::
+
+::: code-group
+
+```py [Code]
+from n6py.display import Box
+
+lines = ("┌", "─", "┐",
+         "│",      "│",
+         "└", "─", "┘")
+
+box = Box("Hello World!", lines)
+print(box)
+```
+
+```py [Result]
+┌──────────────┐
+│ Hello World! │
+└──────────────┘
+```
+
+:::
+
+## box <Badge type="tip" text="0.1.29" />
+
+Returns the provided content as a stylized box string.
+
+- **path:** `n6py.display.box`
+- **args:** `content`
+
+::: details type
+
+```py
+(function) box(content: str) -> Box
+```
+
+:::
+
+::: code-group
+
+```py [Code]
+from n6py.display import box
+
+print(box("Hello World!"))
+```
+
+```py [Result]
+┌──────────────┐
+│ Hello World! │
+└──────────────┘
+```
+
+:::
+
 ## HTML <Badge type="tip" text="0.1.20" />
 
 HTML class that prepares an HTML document, by inserting provided HTML markup and including any CSS or JavaScript file URLs.
