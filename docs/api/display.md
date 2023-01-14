@@ -100,6 +100,7 @@ The load parameter supports the following frameworks/libraries out of the box:
 | [minze](https://minze.dev/)                           | JS       | web components     |
 | [normalize](https://necolas.github.io/normalize.css/) | CSS      | layout, reset      |
 | [tailwind](https://tailwindcss.com/)                  | CSS      | layout, utilities  |
+| [unocss](https://github.com/unocss/unocss)            | CSS      | layout, utilities  |
 | [vue](https://vuejs.org/)                             | JS       | layout, components |
 
 :::
