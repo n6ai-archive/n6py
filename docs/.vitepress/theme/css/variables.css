@@ -1,9 +1,15 @@
 :root {
-  --vp-c-brand-darker: rgb(60 80 215);
-  --vp-c-brand-dark: rgb(80 100 235);
-  --vp-c-brand: rgb(100 120 255);
-  --vp-c-brand-light: rgb(120 140 255);
-  --vp-c-brand-lighter: rgb(140 160 255);
+  --n6py-c-brand-darker: rgb(60 80 215);
+  --n6py-c-brand-dark: rgb(80 100 235);
+  --n6py-c-brand: rgb(100 120 255);
+  --n6py-c-brand-light: rgb(120 140 255);
+  --n6py-c-brand-lighter: rgb(140 160 255);
+
+  --vp-c-brand-darker: var(--n6py-c-brand-darker);
+  --vp-c-brand-dark: var(--n6py-c-brand-dark);
+  --vp-c-brand: var(--n6py-c-brand);
+  --vp-c-brand-light: var(--n6py-c-brand-light);
+  --vp-c-brand-lighter: var(--n6py-c-brand-lighter);
 
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: linear-gradient(
@@ -22,5 +28,11 @@
 }
 
 :root.dark {
+  --vp-c-bg: rgb(36 36 38);
+  --vp-c-bg-soft: rgb(46 46 48);
+  --vp-c-brand: var(--n6py-c-brand-lighter);
+  --vp-button-brand-bg: var(--n6py-c-brand);
+  --vp-c-gutter: var(--vp-c-divider);
+
   --vp-home-hero-image-background-image-opacity: 60%;
 }
