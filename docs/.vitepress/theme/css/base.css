@@ -3,11 +3,11 @@ html {
 }
 
 ::selection {
-  background: var(--vp-c-mute-darker);
-  color: var(--vp-c-neutral);
+  background: var(--vp-c-gray-light-1);
+  color: var(--vp-c-black);
 }
 
 html.dark ::selection {
-  background: var(--vp-c-mute-lighter);
-  color: var(--vp-c-neutral);
+  background: var(--vp-c-gray-dark-2);
+  color: var(--vp-c-white-mute);
 }
