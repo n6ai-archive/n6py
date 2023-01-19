@@ -11,6 +11,9 @@
   --vp-c-brand-light: var(--n6py-c-brand-light);
   --vp-c-brand-lighter: var(--n6py-c-brand-lighter);
 
+  --vp-custom-block-info-border: rgb(60 60 60 / 15%);
+  --vp-code-tab-divider: var(--vp-c-text-1);
+
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: linear-gradient(
     45deg,
@@ -33,6 +36,7 @@
   --vp-c-brand: var(--n6py-c-brand-lighter);
   --vp-button-brand-bg: var(--n6py-c-brand);
   --vp-c-gutter: var(--vp-c-divider);
+  --vp-code-tab-divider: var(--vp-c-divider);
 
   --vp-home-hero-image-background-image-opacity: 60%;
 }

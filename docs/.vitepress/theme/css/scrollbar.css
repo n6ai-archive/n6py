@@ -8,11 +8,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--vp-c-gray-light-4);
+  background: var(--vp-c-mute-dark);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--vp-c-gray-light-3);
+  background: var(--vp-c-mute-darker);
 }
 
 [class^='language-'] ::-webkit-scrollbar-track {
@@ -28,11 +28,11 @@ html:not(.dark) [class^='language-'] ::-webkit-scrollbar-thumb:hover {
 }
 
 html.dark ::-webkit-scrollbar-thumb {
-  background: var(--vp-c-gray-dark-3);
+  background: var(--vp-c-mute-light);
 }
 
 html.dark ::-webkit-scrollbar-thumb:hover {
-  background: var(--vp-c-gray-dark-2);
+  background: var(--vp-c-mute-lighter);
 }
 
 ::-webkit-scrollbar-corner {
