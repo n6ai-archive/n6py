@@ -11,7 +11,6 @@
   --vp-c-brand-light: var(--n6py-c-brand-light);
   --vp-c-brand-lighter: var(--n6py-c-brand-lighter);
 
-  --vp-custom-block-info-border: rgb(60 60 60 / 15%);
   --vp-code-tab-divider: var(--vp-c-text-1);
 
   --vp-home-hero-name-color: transparent;
@@ -28,6 +27,10 @@
     rgb(120 140 255 / var(--vp-home-hero-image-background-image-opacity)) 50%
   );
   --vp-home-hero-image-filter: blur(100px);
+}
+
+:root:not(.dark) {
+  --vp-custom-block-info-border: rgb(60 60 60 / 15%);
 }
 
 :root.dark {
