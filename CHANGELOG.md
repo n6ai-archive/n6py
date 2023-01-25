@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.31](https://github.com/n6ai/n6py/compare/v0.1.30...v0.1.31) (2023-01-25)
+
+
+### Bug Fixes
+
+* only run git clone if folder doesn't exist ([8db6926](https://github.com/n6ai/n6py/commit/8db6926f8ceb1c10735c1c02ccf5daf4bb6572de))
+
 ## [0.1.30](https://github.com/n6ai/n6py/compare/v0.1.29...v0.1.30) (2023-01-25)
 
 
