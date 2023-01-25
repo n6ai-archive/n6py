@@ -16,15 +16,12 @@ def n_changed(
 
     Parameters
     ----------
-    prev : int, Sequence, Collection, NDArray, pd.Series or pd.DataFrame
-        Number of previous values or previous values.
-    curr : int, Sequence, Collection, NDArray, pd.Series or pd.DataFrame
-        Number of current values or current values.
+    prev: Number of previous values or previous values.
+    curr: Number of current values or current values.
 
     Returns
     -------
-    str :
-        A string of calculated stats.
+    A string of calculated stats.
 
     Examples
     --------

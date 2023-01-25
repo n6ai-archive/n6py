@@ -50,12 +50,9 @@ class HTML:
         """
         Parameters
         ----------
-        content : str
-            A string containing HTML markup.
-        css : str, Sequence or None, default 'None'
-            A URL or a sequence of URLs to CSS files.
-        js : str, Sequence or None, default 'None'
-            A URL or a sequence of URLs to JavaScript files.
+        content: A string containing HTML markup.
+        css: A URL or a sequence of URLs to CSS files.
+        js: A URL or a sequence of URLs to JavaScript files.
 
         Examples
         --------
@@ -149,13 +146,11 @@ class HTML:
 
         Parameters
         ----------
-        template : str
-            A string containing HTML markup.
+        template: A string containing HTML markup.
 
         Returns
         -------
-        str :
-            A string containing minified HTML markup.
+        A string containing minified HTML markup.
         """
         return re.sub(
             r"<!--(.*?)-->|(?=>)\s+|(?<!\w)\s+(?=<)|\s+$", "", "".join(template)
@@ -183,8 +178,7 @@ class HTML:
 
         Parameters
         ----------
-        name : str
-            Name or path of the file that will be written to disk.
+        name: Name or path of the file that will be written to disk.
 
         Examples
         --------
@@ -213,17 +207,13 @@ def html(
 
     Parameters
     ----------
-    content : str
-        A string containing HTML markup.
-    load : str, Sequence or None, default 'None'
-        A string or Sequence of strings that define which libraries should be loaded.
-    raw : bool, default 'False'
-        A boolean that determines if the template should displayed or returned.
+    content: A string containing HTML markup.
+    load: A string or Sequence of strings that define which libraries should be loaded.
+    raw: A boolean that determines if the template should displayed or returned.
 
     Returns
     -------
-    str, DisplayHandle or None :
-        HTML document string, IPython display or None.
+    HTML document string, IPython display or None.
 
     Examples
     --------

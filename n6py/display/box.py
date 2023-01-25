@@ -21,10 +21,8 @@ class Box:
         """
         Parameters
         ----------
-        content : str
-            A text string.
-        lines : List
-            A tuple of symbols representing the edges of a box.
+        content: A text string.
+        lines: A tuple of symbols representing the edges of a box.
 
         Examples
         --------
@@ -72,13 +70,11 @@ def box(content: str):
 
     Parameters
     ----------
-    content : str
-        A text string.
+    content: A text string.
 
     Returns
     -------
-    str :
-        Stylized boxed string.
+    Stylized boxed string.
 
     Examples
     --------

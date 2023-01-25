@@ -17,17 +17,13 @@ def split(
 
     Parameters
     ----------
-    values : list, tuple, NDArray or pd.Series
-        A list, tuple, numpy array or pandas series of values.
-    values_to_keep : list, tuple, NDArray or pd.Series
-        A list, tuple, numpy array or pandas series containing values to keep.
-    remainder : str, int, float or None, default 'other'
-        The value the remaing values will be replaced with.
+    values: A list, tuple, numpy array or pandas series of values.
+    values_to_keep: A list, tuple, numpy array or pandas series containing values to keep.
+    remainder: The value the remaing values will be replaced with.
 
     Returns
     -------
-    list, tuple, NDArray, pd.Series :
-        A processed list, tuple, numpy array or pandas series.
+    A processed list, tuple, numpy array or pandas series.
 
     Examples
     --------
