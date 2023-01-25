@@ -95,7 +95,9 @@ class GitApp:
         A message about success or failure of the process.
         """
         cmd = f"""
-            git clone {self.url} {self.dir}; \
+            if [ ! -d {self.dir} ]; then \
+                git clone {self.url} {self.dir}; \
+            fi; \
             cd {self.dir}; \
             pip install -r requirements.txt
         """
