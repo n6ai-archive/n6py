@@ -28,6 +28,7 @@ n6py                         ➤ package
 
 | API                     | Description                                                           |
 | ----------------------- | --------------------------------------------------------------------- |
+| [app](/api/app)         | A module to create app wrappers around code bases and git repos.      |
 | [display](/api/display) | A module to display content in Jupyter Notebooks.                     |
 | [encode](/api/encode)   | A module for encoding data.                                           |
 | [stats](/api/stats)     | A module to display information and statistics about underlying data. |
