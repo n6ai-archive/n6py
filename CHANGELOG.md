@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.30](https://github.com/n6ai/n6py/compare/v0.1.29...v0.1.30) (2023-01-25)
+
+
+### Features
+
+* add app module and GitApp class ([1215fb6](https://github.com/n6ai/n6py/commit/1215fb60a33d0fd797edc57d1ad3a47b84bac313))
+
 ## [0.1.29](https://github.com/n6ai/n6py/compare/v0.1.28...v0.1.29) (2023-01-14)
 
 
