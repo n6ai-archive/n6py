@@ -35,8 +35,6 @@ class GitApp:
         ...     self.url = 'https://github.com/<USER>/<REPO>'
         ...     self.app_script = 'app.py'
         >>> app = MyApp()
-        >>> app.install()
-        'App installed 📦'
         """
         self.url = url
         self.app_script = app_script
