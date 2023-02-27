@@ -1,5 +1,5 @@
 {
-  "image": "mcr.microsoft.com/vscode/devcontainers/universal",
+  "image": "mcr.microsoft.com/devcontainers/universal",
   "features": {
     "ghcr.io/devcontainers-contrib/features/poetry:1": {}
   },
