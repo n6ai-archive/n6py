@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
-    "lint-staged": "^13.1.0",
+    "lint-staged": "^13.1.2",
     "nodemon": "^2.0.20",
     "prettier": "^2.8.3",
     "simple-git-hooks": "^2.8.1",
