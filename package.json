@@ -7,14 +7,12 @@
     "docs": "vitepress dev docs",
     "docs-build": "vitepress build docs",
     "docs-preview": "vitepress preview docs",
-    "format": "(poetry run poe format) && (prettier --write --cache .)",
+    "format": "(poetry run poe format) && (npx -y prettier --write --cache .)",
     "postinstall": "simple-git-hooks"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
-    "lint-staged": "^13.1.0",
     "nodemon": "^2.0.20",
-    "prettier": "^2.8.3",
     "simple-git-hooks": "^2.8.1",
     "vitepress": "1.0.0-alpha.36"
   },
@@ -24,7 +22,7 @@
   },
   "lint-staged": {
     "*": [
-      "prettier --write --cache --ignore-unknown"
+      "npx prettier --write --cache --ignore-unknown"
     ],
     "**/*.{py,ipynb}": [
       "poetry run poe format"
