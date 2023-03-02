@@ -1,4 +1,4 @@
-name: CI Release
+name: Release
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
 
 jobs:
   run-tests:
-    uses: ./.github/workflows/ci-test.yml
+    uses: ./.github/workflows/test.yml
 
   # Allows to trigger release-please manually by creating an empty release commit
   create-release-commit:
@@ -25,7 +25,7 @@ jobs:
 
       - name: Create commit
         if: ${{ github.event.inputs.version }}
-        uses: ./.github/actions/ci-release-commit
+        uses: ./.github/actions/release-commit
 
   release-please:
     runs-on: ubuntu-latest
