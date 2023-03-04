@@ -1,5 +1,5 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal",
+  "image": "n6ai/pynode-dev",
   "features": {
     "ghcr.io/devcontainers-contrib/features/poetry:1": {}
   },
