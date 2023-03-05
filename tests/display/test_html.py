@@ -5,6 +5,7 @@ from tempfile import TemporaryDirectory
 
 from n6py.display import HTML, html
 
+
 # pylint: disable=line-too-long
 def template(content: str = ""):
     """Builds template for testing comparison"""
