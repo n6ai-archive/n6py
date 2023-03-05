@@ -73,20 +73,19 @@ poetry shell
 
 ## Commands
 
-> If you are inside a venv in the terminal, you can ommit `poetry run` and run commands only with `poe` e.g. `poe format`.
+> Commands are executed via npm scripts.
 
-| Command                     | Action                                     |
-| :-------------------------- | :----------------------------------------- |
-| `poetry run poe format`     | Runs black                                 |
-| `poetry run poe lint`       | Runs pylint                                |
-| `poetry run poe test`       | Runs pytest                                |
-| `poetry run poe test-debug` | Runs pytest with print statements enabled  |
-| `poetry run poe doctest`    | Runs doc tests on all n6py files           |
-| `npm run dev`               | Starts a dev server for playground/main.py |
-| `npm run docs`              | Starts a dev server for docs               |
-| `npm run docs-build`        | Builds the docs                            |
-| `npm run docs-preview`      | Serves the built docs                      |
-| `npm run format`            | Runs black and prettier                    |
+| Command                | Action                                     |
+| :--------------------- | :----------------------------------------- |
+| `npm run dev`          | Starts a dev server for playground/main.py |
+| `npm run docs`         | Starts a dev server for docs               |
+| `npm run docs-build`   | Builds the docs                            |
+| `npm run docs-preview` | Serves the built docs                      |
+| `npm run format`       | Runs black and prettier                    |
+| `npm run lint`         | Runs pylint                                |
+| `npm run test`         | Runs pytest                                |
+| `npm run test-debug`   | Runs pytest with print statements enabled  |
+| `npm run doctest`      | Runs doc tests on all n6py files           |
 
 ## Pull Request Guidelines
 

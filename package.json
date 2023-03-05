@@ -7,7 +7,11 @@
     "docs": "vitepress dev docs",
     "docs-build": "vitepress build docs",
     "docs-preview": "vitepress preview docs",
-    "format": "(poetry run poe format) && (npx -y prettier --write --cache .)",
+    "format": "(black .) && (npx -y prettier --write --cache .)",
+    "lint": "pylint n6py tests",
+    "test": "pytest tests",
+    "test-debug": "pytest tests -s",
+    "doctest": "pytest n6py --doctest-modules",
     "postinstall": "simple-git-hooks"
   },
   "devDependencies": {
@@ -25,7 +29,8 @@
       "npx prettier --write --cache --ignore-unknown"
     ],
     "**/*.{py,ipynb}": [
-      "poetry run poe format"
+      "black",
+      "pylint"
     ]
   }
 }
