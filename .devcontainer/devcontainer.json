@@ -9,7 +9,7 @@
   },
   "postCreateCommand": {
     "poetry-install": "poetry install",
-    "npm-install": "npm install"
+    "npm-install": "sudo npm install"
   },
   "customizations": {
     "vscode": {
