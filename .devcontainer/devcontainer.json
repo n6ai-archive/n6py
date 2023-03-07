@@ -4,13 +4,8 @@
     "ghcr.io/devcontainers-contrib/features/poetry:1": {}
   },
   "waitFor": "onCreateCommand",
-  "onCreateCommand": {
-    "venv": "poetry config virtualenvs.in-project true"
-  },
-  "postCreateCommand": {
-    "poetry-install": "poetry install",
-    "npm-install": "sudo npm install"
-  },
+  "onCreateCommand": "poetry config virtualenvs.in-project true",
+  "postCreateCommand": "poetry install && sudo npm install",
   "customizations": {
     "vscode": {
       "extensions": ["ms-python.python"]
