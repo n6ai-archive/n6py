@@ -1,5 +1,5 @@
 {
-  "image": "n6ai/pynode-dev",
+  "image": "ghcr.io/n6ai/pynode-dev",
   "features": {
     "ghcr.io/devcontainers-contrib/features/poetry:1": {}
   },
