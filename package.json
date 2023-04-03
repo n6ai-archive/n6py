@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
-    "nodemon": "^2.0.20",
+    "nodemon": "^2.0.22",
     "simple-git-hooks": "^2.8.1",
     "vitepress": "1.0.0-alpha.36"
   },
